@@ -31,11 +31,7 @@ def stdoutIO(stdout=None):
     sys.stdout = old
 
 code = content
-# code = """
-# i = [0,1,2]
-# for j in i :
-#     print(j)
-# """
+
 st.text("Output of code:")
 with stdoutIO() as s:
     try:
