@@ -5,6 +5,7 @@ To run this, go to the project folder and run:
 - streamlit run myfile.py
 '''
 
+
 # Load modules
 import streamlit as st
 from streamlit_option_menu import option_menu
@@ -28,7 +29,7 @@ root_dir = os.path.abspath("")
 # load logos 
 logo = Image.open(os.path.join(root_dir,'images','chcaa_logo.png'))
 # Setting main page configurations
-st.set_page_config(layout="wide",page_title="Learning Platform", page_icon="😊")
+st.set_page_config(layout="wide",page_title="Learning Platform", page_icon=logo)
 
 # Setting main page configurations - padding of elements on the page
 
