@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = "*"
+numpy = "*"
+streamlit-option-menu = "*"
+opencv-python = "*"
+streamlit-ace = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
