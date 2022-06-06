@@ -23,16 +23,14 @@ import os
 from io import StringIO
 import contextlib
 
-# set up root directory
-root_dir = os.path.abspath("")
+# Import page functions 
+from utils.page_introduction import page_intro
 
-# load logos 
-logo = Image.open(os.path.join(root_dir,'images','chcaa_logo.png'))
-# Setting main page configurations
+# set main page configurations
+logo = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logo.png'))
 st.set_page_config(layout="wide",page_title="Learning Platform", page_icon=logo)
 
-# Setting main page configurations - padding of elements on the page
-
+# set main page configurations - padding of elements on the page
 st.markdown("""
         <style>
                .css-18e3th9 {
@@ -58,12 +56,24 @@ st.markdown("""
         </style>
         """, unsafe_allow_html=True)
 
-if "page" not in st.session_state: 
-    st.session_state.page = "Welcome"
+# initialise app with introduction page
+# if "page" not in st.session_state: 
+#     st.session_state.page = "Introduction"
+#     #st.session_state.page = "Introduction"
 
-
-def page_main():
-    st.write("Page1")
+# set up sidebar
+with st.sidebar:
+    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How computers think", "1.1 Computer programmes", "1.2 Types and Values","1.3 Debugging","1.4 Glossary","1.5 Quiz","---","Full Glossary","Contact"],
+                        icons=['house','dot','kanban','dot','dot','dot','dot','dot','dot','book','person lines fill'], #https://icons.getbootstrap.com/
+                        default_index=0,
+                        styles={
+                            "menu-title": {"font-size": "18px"}, 
+                            "container": {"background-color": "#fafafa"}, # "padding": "5!important", 
+                            "icon": {"color": "black", "font-size": "18px"}, 
+                            "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+                            "nav-link-selected": {"background-color": "#0077cc"},
+    }
+    )
 
 def page2():
     st.write("Page2")
@@ -151,20 +161,23 @@ def main():
 
     </style>""", unsafe_allow_html=True)
 
-    pages = {
-        "Welcome": page_main, # title of button is "Welcome"
-        "Standardisation": page2
-    }
+    # pages = {
+    #     "Introduction": page_intro, 
+    #     "1. How computers think": page2
+    # }
 
+    if choose == "Introduction":
+        page_intro()
+        #st.session_state = "Introduction"
+    if choose == "1. How computers think":
+        st.write("hello")
+        #st.session_state = "1. How computers think"
+    #if st.sidebar.button("Intro"):
+    #    st.session_state.page = "Standardisation"
+    #if st.sidebar.button("Welcome"):
+    #    st.session_state.page = "page_main"
 
-    col1, col2 = st.sidebar.columns([1,1])
-
-    if st.sidebar.button("Standardisation"):
-        st.session_state.page = "Standardisation"
-    if st.sidebar.button("Welcome"):
-        st.session_state.page = "page_main"
-
-    pages[st.session_state.page]()
+    #pages[st.session_state.page]()
 
 if __name__ == "__main__": 
 	main()    
