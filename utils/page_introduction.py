@@ -26,14 +26,12 @@ def page_intro():
     * XXX
     ''')
     
-    st.write('''
+    st.markdown('''
     You can navigate the module by clicking on the topics in the left side bar, when you want to continue to the next page.  
 
     We hope that you will enjoy and learn some new cool stuff about programming! 
 
-    Sara Kolding and Signe Kirk Brødbæk
-    
-    Cognitive Science Graduate Students, Aarhus University 
-    
-    June 10, 2022
-    ''')
+    <div style="text-align: right"> Sara Kolding and Signe Kirk Brødbæk </div>
+    <div style="text-align: right"> Cognitive Science Graduate Students, Aarhus University </div>
+    <div style="text-align: right"> June 10, 2022 </div>
+    ''',unsafe_allow_html=True)

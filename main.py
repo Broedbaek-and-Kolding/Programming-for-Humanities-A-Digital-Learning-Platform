@@ -16,15 +16,13 @@ import cv2
 import pandas as pd
 #from st_aggrid import AgGrid
 import io 
-
-from streamlit_ace import st_ace
-import sys
 import os
-from io import StringIO
-import contextlib
+
 
 # Import page functions 
 from utils.page_introduction import page_intro
+from utils.page_1_how_computers_think import page_1_how_computers_think
+from utils.page_quiz import page_quiz
 
 # set main page configurations
 logo = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logo.png'))
@@ -36,25 +34,36 @@ st.markdown("""
                .css-18e3th9 {
                     padding-top: 1rem;
                     padding-bottom: 10rem;
-                    padding-left: 5rem;
-                    padding-right: 5rem;
+                    padding-left: 10rem;
+                    padding-right: 13rem;
                 }
-               .css-1d391kg {
-                    padding-top: 3.5rem;
-                    padding-right: 1rem;
-                    padding-bottom: 3.5rem;
-                    padding-left: 1rem;
-                }
-                .css-1a7jz76 h3{
-                    padding: 0rem 0px 0rem;
-                }
-
-                .css-1xv07vx hr{
-                margin: 0.5em 0px;
-                }
-
         </style>
         """, unsafe_allow_html=True)
+
+# st.markdown("""
+#         <style>
+#                .css-18e3th9 {
+#                     padding-top: 1rem;
+#                     padding-bottom: 10rem;
+#                     padding-left: 5rem;
+#                     padding-right: 5rem;
+#                 }
+#                .css-1d391kg {
+#                     padding-top: 3.5rem;
+#                     padding-right: 1rem;
+#                     padding-bottom: 3.5rem;
+#                     padding-left: 1rem;
+#                 }
+#                 .css-1a7jz76 h3{
+#                     padding: 0rem 0px 0rem;
+#                 }
+
+#                 .css-1xv07vx hr{
+#                 margin: 0.5em 0px;
+#                 }
+
+#         </style>
+#         """, unsafe_allow_html=True)
 
 # initialise app with introduction page
 # if "page" not in st.session_state: 
@@ -75,9 +84,6 @@ with st.sidebar:
     }
     )
 
-def page2():
-    st.write("Page2")
-
 def main():
     # Setting button configurations - in first main function, followed by pages + sidebar (basic layout) - this function only sets the layout of the pages + sidebar
     ### https://www.bestcssbuttongenerator.com/#/21
@@ -86,7 +92,7 @@ def main():
     <style>
 
     .css-1a7jz76 {
-        padding: 4rem 1rem;
+        padding: 4rem 10rem;
     }
 
     div[data-testid="stToolbar"] {
@@ -161,23 +167,14 @@ def main():
 
     </style>""", unsafe_allow_html=True)
 
-    # pages = {
-    #     "Introduction": page_intro, 
-    #     "1. How computers think": page2
-    # }
-
     if choose == "Introduction":
-        page_intro()
+        page_quiz()
+        #page_intro()
         #st.session_state = "Introduction"
     if choose == "1. How computers think":
-        st.write("hello")
-        #st.session_state = "1. How computers think"
-    #if st.sidebar.button("Intro"):
-    #    st.session_state.page = "Standardisation"
-    #if st.sidebar.button("Welcome"):
-    #    st.session_state.page = "page_main"
-
-    #pages[st.session_state.page]()
+        page_1_how_computers_think()
+    if choose == "1.5 Quiz":
+        page_quiz()
 
 if __name__ == "__main__": 
 	main()    

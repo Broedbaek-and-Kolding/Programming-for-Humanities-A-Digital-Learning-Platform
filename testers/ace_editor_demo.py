@@ -65,15 +65,18 @@ if choose == "Introduction":
     * XXX
     ''')
     
-    st.write('''
+    st.markdown('''
     You can navigate the module by clicking on the topics in the left side bar, when you want to continue to the next page.  
 
-    We hope that you will enjoy and learn some new cool stuff about programming! \n\n\n
+    We hope that you will enjoy and learn some new cool stuff about programming!
 
-    Sara Kolding and Signe Kirk Brødbæk \n
-    Cognitive Science Graduate Students, Aarhus University \n
+    Sara Kolding and Signe Kirk Brødbæk 
+    
+    Cognitive Science Graduate Students, Aarhus University 
+    
     June 10, 2022
-    ''')
+    '''
+    )
 
 if choose == "1. How computers think":
 # Spawn a new Ace editor
