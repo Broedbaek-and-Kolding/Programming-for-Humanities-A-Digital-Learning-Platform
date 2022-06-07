@@ -5,28 +5,29 @@ To run this, go to the project folder and run:
 - streamlit run myfile.py
 '''
 
-
 # Load modules
 import streamlit as st
 from streamlit_option_menu import option_menu
-import streamlit.components.v1 as html
+#import streamlit.components.v1 as html
 from  PIL import Image
-import numpy as np
-import cv2
-import pandas as pd
+#import numpy as np
+#import cv2
+#import pandas as pd
 #from st_aggrid import AgGrid
-import io 
+#import io 
 import os
-
 
 # Import page functions 
 from utils.page_introduction import page_intro
 from utils.page_1_how_computers_think import page_1_how_computers_think
+from utils.page_1_1_computer_programmes import page_1_1_computer_programmes
+from utils.page_1_2_types_and_values import page_1_2_types_and_values
+from utils.page_glossary import page_glossary
 from utils.page_quiz import page_quiz
 
 # set main page configurations
-logo = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logo.png'))
-st.set_page_config(layout="wide",page_title="Learning Platform", page_icon=logo)
+#logo = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logo.png'))
+st.set_page_config(layout="wide",page_title="Learning Platform", page_icon="🐍")
 
 # set main page configurations - padding of elements on the page
 st.markdown("""
@@ -72,8 +73,8 @@ st.markdown("""
 
 # set up sidebar
 with st.sidebar:
-    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How computers think", "1.1 Computer programmes", "1.2 Types and Values","1.3 Debugging","1.4 Glossary","1.5 Quiz","---","Full Glossary","Contact"],
-                        icons=['house','dot','kanban','dot','dot','dot','dot','dot','dot','book','person lines fill'], #https://icons.getbootstrap.com/
+    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How Computers Think", "1.1 Computer Programmes", "1.2 Types and Values","1.3 Exercises","1.4 Glossary","1.5 Quiz","---","Contact"],
+                        icons=['house','dot','kanban','dot','dot','boxes','book','stopwatch','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
                         default_index=0,
                         styles={
                             "menu-title": {"font-size": "18px"}, 
@@ -124,11 +125,13 @@ def main():
         }
 
     div.stButton > button:first-child {
-        box-shadow:inset 0px 1px 0px 0px #54a3f7;
-        background:linear-gradient(to bottom, #0975b0 5%, #0061a7 100%);
-        background-color:#0975b0;
-        border-radius:5px;
-        border:1px solid #124d77;
+        background:linear-gradient(to bottom, #0077cc 5%, #1e62d0 100%);
+        background-color:#0077cc;
+        border-radius:6px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:16px;
         display: flex;
         flex-direction: column;
         cursor:pointer;
@@ -139,8 +142,8 @@ def main():
 
         }
     div.stButton > button:hover {
-        background:linear-gradient(to bottom, #0061a7 80%, #0a6da3 100%);
-        background-color:#0061a7;
+        background:linear-gradient(to bottom, #0077cc 80%, #0a6da3 100%);
+        background-color:#0077cc;
         }
 
     div.stButton > button:active {
@@ -148,33 +151,30 @@ def main():
         top:2px;
         }
 
-    div.stDownloadButton > button:first-child {
-        background-color: #007429;
-        color:#ffffff;
-        border-color: #006eaf;
-        height: 3.7em;
-        width: 16em;
-        margin: auto;
-        display: block;
-        }
-    div.stDownloadButton > button:hover {
-        background-color: #1e9047;
-        color:#ffffff;
-        border-color: #006eaf;
-        height: 3.7em;
-        width: 16em;
-        }
 
     </style>""", unsafe_allow_html=True)
 
     if choose == "Introduction":
-        page_quiz()
-        #page_intro()
+        page_intro()
         #st.session_state = "Introduction"
-    if choose == "1. How computers think":
+    if choose == "1. How Computers Think":
         page_1_how_computers_think()
+    if choose == "1.1 Computer Programmes":
+        page_1_1_computer_programmes()
+    if choose == "1.2 Types and Values":
+        page_1_2_types_and_values()
+    if choose == "1.3 Exercises":
+        pass 
+    if choose == "1.4 Glossary":
+        page_glossary()
     if choose == "1.5 Quiz":
         page_quiz()
+    if choose == "Full Glossary":
+        pass 
+    if choose == "Contact": 
+        pass
+
+
 
 if __name__ == "__main__": 
 	main()    

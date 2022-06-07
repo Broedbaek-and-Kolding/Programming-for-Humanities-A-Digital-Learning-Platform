@@ -3,23 +3,32 @@ import os
 from  PIL import Image
 
 def page_intro():
-    logo = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logowithtext.png'))
-    st.image(logo, width=500 )
+    st.subheader("Welcome to")
+    st.header("*Python Programming for Humanities Students*")
     st.write('''
-    Welcome! 
-
     This is a prototype of an online learning platform created as an exam project for the course human-computer interaction as a part of our study. 
 
-    In this prototype, we include one module, *Scientific programming for humanities students*. 
+    In this prototype, we include one module, *Python Programming for Humanities Students*. 
     This module is meant to be a gentle introduction to programming and *text analysis* for students who have not worked with computers in this way before. 
-
+    ''')
+    st.write('''
     We take it one step at a time, with short and interactive introductions to learn about some of the general principles in which computers can be used to study text data. Examples of text data could be social media posts, literary texts, or historical newspapers.  
 
     We want to help you get familiar with some programming techniques to help you produce readable and reproducible code. And to do this, we will also introduce you to some basics on how computers work. 
+    
+    Below, you see an example of code written in the programming language, Python:
+    ''')
+    im = Image.open(os.path.join(os.path.abspath(""),'images','python_code.png'))
+    st.image(im,use_column_width=True, output_format="PNG")
+    im2 = Image.open(os.path.join(os.path.abspath(""),'images','python_output.png'))
+    st.image(im2,use_column_width=True, output_format="PNG")
 
-    For this module, there are no prerequisites. All topics will be introductory, and you will be able to try programming in this browser without the need to install anything on your computer. 
+    st.info(''' **Prerequisites**
+
+    For this module, there are no prerequisites. All topics will be introductory, and you will try to program in this code windows within this browser without the need to install anything on your computer. 
     ''') 
-    st.info('''
+    st.info('''**Learning Outcomes**
+
     At the end of this module, you will be able to:
     * XXX
     * XXX

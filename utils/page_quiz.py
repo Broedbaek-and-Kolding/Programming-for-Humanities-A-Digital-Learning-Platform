@@ -6,12 +6,6 @@ import numpy as np
 import time
 import random
 
-def exists(variable):
-  if variable in locals():
-    return True # print('data is in global variables')
-  else:
-    return False # print('data is not in global variables')
-
 def page_quiz():
     # dictionary with questions: [0] = question, 1-3 = answers, 4 = correct answer, 5 = correct feedback, 6 = incorrect feedback
     quiz_dict = {1: ["What does this mean?", "Nothing", "Everything", "Something, but I don't know what", "Everything", "Yes, that is correct, because HCI is LIFE!", "Unfortunately, that is not correct. This is 'everything', because HCI is life"], 
@@ -48,19 +42,23 @@ def page_quiz():
     # show start page 
     with col2: 
         if not st.session_state.quiz_started:
-            start = st.button("Press to start the quiz", key="start")
+            placeholder_start = st.empty()
+            start = placeholder_start.button("Press to start the quiz", key="start")
             if start:
                 st.session_state.quiz_started = True
                 st.session_state.q_number = 1
     
+    placeholder_start = st.empty
+    
     # if quiz is started, show questions one by one
     if st.session_state.quiz_started:
+        start = st.empty
         q = st.session_state.q_number
 
         # if last question 
         if q > len(quiz_dict):
             with col2:
-                st.subheader("You have completed the quiz!")
+                st.header("You have completed the quiz!")
                 st.markdown(f'''
                 You answered {st.session_state.counter} of {len(quiz_dict)} questions correctly! Well done!
                 
@@ -73,6 +71,13 @@ def page_quiz():
 
                 st.markdown('''
                 To continue to the next topic, and learn even more about programming go to the sidebar \n\n and choose the topic you want to learn more about.''')
+
+                if st.button("Press here to save your batch in the sidebar",key="sidebar_batch"):
+                    with st.sidebar:
+                        if 'batch' not in st.session_state or st.session_state.batch == "q1":
+                            st.session_state.batch = "q1"
+                            st.image(batchq1, width=50)
+                    st.write("Unfortunately, for now, this batch will disappear when you leave this tab. We are working on how to preserve it!")
 
         # for q in range(1,len(quiz_dict)+1):
         with col2:
@@ -108,6 +113,7 @@ def page_quiz():
                     placeholder.empty()
 
 
+
     # for q in quiz_dict:
     #     st.write(q)
     #     radio = st.radio(quiz_dict[q][0],(quiz_dict[q][1],quiz_dict[q][2],quiz_dict[q][3]))
@@ -119,6 +125,7 @@ def page_quiz():
     #         else:
     #             st.error("Incorrect. Try again ")
         
+
 
 
 # progress bar 
