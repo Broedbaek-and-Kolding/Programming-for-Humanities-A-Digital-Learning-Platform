@@ -1,7 +1,8 @@
 [theme]
-primaryColor="#00acd7"
+primaryColor="#0077cc"
 backgroundColor="#ffffff"
 secondaryBackgroundColor="#ebeeee"
 textColor="#000000"
 font="sans serif"
+font-size=16px
 

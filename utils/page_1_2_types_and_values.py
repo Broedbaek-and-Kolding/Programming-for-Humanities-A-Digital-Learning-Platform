@@ -10,7 +10,8 @@ def page_1_2_types_and_values():
     You can continue to learn about programming in Python on the next pages.
     
     Sorry for the inconvenience! 
+
+
     ''')
-    
-    im = Image.open(os.path.join(os.path.abspath(""),'images','page_under_construction.png'))
-    st.image(im,use_column_width=True, output_format="PNG")
+    im = Image.open(os.path.join(os.path.abspath(""),'images','under_construction.jpg'))
+    st.image(im,width=600, output_format="JPEG")

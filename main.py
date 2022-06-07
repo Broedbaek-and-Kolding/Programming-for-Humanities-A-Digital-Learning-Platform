@@ -82,8 +82,8 @@ with st.sidebar:
                             "icon": {"color": "black", "font-size": "18px"}, 
                             "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
                             "nav-link-selected": {"background-color": "#0077cc"},
-    }
-    )
+                            }
+                        )
 
 def main():
     # Setting button configurations - in first main function, followed by pages + sidebar (basic layout) - this function only sets the layout of the pages + sidebar
@@ -151,6 +151,9 @@ def main():
         top:2px;
         }
 
+    .streamlit-expanderHeader {
+    font-size: 16px;
+    }
 
     </style>""", unsafe_allow_html=True)
 
