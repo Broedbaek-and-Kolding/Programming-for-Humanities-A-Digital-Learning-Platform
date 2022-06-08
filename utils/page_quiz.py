@@ -8,9 +8,16 @@ import random
 
 def page_quiz():
     # dictionary with questions: [0] = question, 1-3 = answers, 4 = correct answer, 5 = correct feedback, 6 = incorrect feedback
-    quiz_dict = {1: ["What does this mean?", "Nothing", "Everything", "Something, but I don't know what", "Everything", "Yes, that is correct, because HCI is LIFE!", "Unfortunately, that is not correct. This is 'everything', because HCI is life"], 
-            2: ["Is Sara cool?",'Yes','No','Sometimes', "Yes", "Yes, that is correct! \n Sara is cool because she's got swag!", "Unfortunately, that is not correct. Sara *is* cool!"], 
-            3: ['Can Signe be said to have a functioning arm?', 'Yes','No','Sometimes', "Sometimes", "Yes, that is correct! \n\n Signe's arm only works sometimes because it breaks when she doesn't take care of it!", "Unfortunately, that is not correct. Signe's arm only works sometimes."]}
+    quiz_dict = {1: ["What type of language is a programming language, such as Python?", "A natural language", "An informal language","A formal language", "A formal language", "Yes, that is correct! \n\n Programming languages are formal languages because they are specifically designed to express the computations, we want the computer to execute.", "That is not correct, unfortunately. \n\n Programming languages are formal languages because they are specifically designed to express the computations, we want the computer to execute."],
+            2: ["What does this mean?", "Nothing", "Everything", "Something, but I don't know what", "Everything", "Yes, that is correct, because HCI is LIFE!", "Unfortunately, that is not correct. This is 'everything', because HCI is life"], 
+            3: ["Is Sara cool?",'Yes','No','Sometimes', "Yes", "Yes, that is correct! \n Sara is cool because she's got swag!", "Unfortunately, that is not correct. Sara *is* cool!"], 
+            4: ['Can Signe be said to have a functioning arm?', 'Yes','No','Sometimes', "Sometimes", "Yes, that is correct! \n\n Signe's arm only works sometimes because it breaks when she doesn't take care of it!", "Unfortunately, that is not correct. Signe's arm only works sometimes."],
+            5: ['test','test','test','test','test','test','test'],
+            6: ['test','test','test','test','test','test','test'],
+            7: ['test','test','test','test','test','test','test'],
+            8: ['test','test','test','test','test','test','test'],
+            9: ['test','test','test','test','test','test','test'],
+            10: ['test','test','test','test','test','test','test']}
 
 
      # define columns 
@@ -38,8 +45,9 @@ def page_quiz():
     # prepare counter for correct questions
     if 'counter' not in st.session_state:
         st.session_state.counter = 0
-
-    # show start page 
+    if 'badge' not in st.session_state:
+        st.session_state.badge = False
+    # show start page (start button issue not solved)
     with col2: 
         if not st.session_state.quiz_started:
             placeholder_start = st.empty()
@@ -62,22 +70,28 @@ def page_quiz():
                 st.markdown(f'''
                 You answered {st.session_state.counter} of {len(quiz_dict)} questions correctly! Well done!
                 
-                You have received a batch for your first quiz.
+                You have received a badge for your first quiz.
 
                 Congratulations!
                 ''')
-                batchq1 = Image.open(os.path.join(os.path.abspath(""),'images','batchq1.png'))
-                st.image(batchq1, width=100)
+                if st.session_state.counter <= 6:
+                    badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_bronze.png'))
+                elif 6 < st.session_state.counter <= 8:
+                    badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_silver.png'))
+                elif st.session_state.counter > 8:
+                    badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_gold.png'))
+                
+                st.image(badge1, width=100)
 
                 st.markdown('''
                 To continue to the next topic, and learn even more about programming go to the sidebar \n\n and choose the topic you want to learn more about.''')
 
-                if st.button("Press here to save your batch in the sidebar",key="sidebar_batch"):
-                    with st.sidebar:
-                        if 'batch' not in st.session_state or st.session_state.batch == "q1":
-                            st.session_state.batch = "q1"
-                            st.image(batchq1, width=50)
-                    st.write("Unfortunately, for now, this batch will disappear when you leave this tab. We are working on how to preserve it!")
+                if st.button("Press here to save your badge in the sidebar",key="sidebar_badge"):
+                #     with st.sidebar:
+                    st.session_state.badge = "q1"
+                            #st.session_state.badge = "q1"
+                            #st.image(badge1, width=50)
+                #st.write("Unfortunately, for now, this badge will disappear when you leave this tab. We are working on how to preserve it!")
 
         # for q in range(1,len(quiz_dict)+1):
         with col2:
@@ -113,19 +127,7 @@ def page_quiz():
                     placeholder.empty()
 
 
-
-    # for q in quiz_dict:
-    #     st.write(q)
-    #     radio = st.radio(quiz_dict[q][0],(quiz_dict[q][1],quiz_dict[q][2],quiz_dict[q][3]))
-    #     if st.button("Submit Answer",key=q): 
-    #         if radio == quiz_dict[q][4]:
-    #             st.success("Correct!")
-    #             if q == 1: 
-    #                 st.success("This means everything, because HCI is LIFE!")
-    #         else:
-    #             st.error("Incorrect. Try again ")
-        
-
+    return (st.session_state.counter, st.session_state.badge)
 
 
 # progress bar 

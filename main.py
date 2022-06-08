@@ -35,46 +35,61 @@ st.markdown("""
                .css-18e3th9 {
                     padding-top: 1rem;
                     padding-bottom: 10rem;
-                    padding-left: 10rem;
-                    padding-right: 13rem;
+                    padding-left: 7rem;
+                    padding-right: 10rem;
                 }
         </style>
         """, unsafe_allow_html=True)
 
-# st.markdown("""
-#         <style>
-#                .css-18e3th9 {
-#                     padding-top: 1rem;
-#                     padding-bottom: 10rem;
-#                     padding-left: 5rem;
-#                     padding-right: 5rem;
-#                 }
-#                .css-1d391kg {
-#                     padding-top: 3.5rem;
-#                     padding-right: 1rem;
-#                     padding-bottom: 3.5rem;
-#                     padding-left: 1rem;
-#                 }
-#                 .css-1a7jz76 h3{
-#                     padding: 0rem 0px 0rem;
-#                 }
+st.markdown("""
+        <style>
+               .css-1m3vq7  {
+                    padding-top: 4.5rem;
+                    padding-bottom: 1.5rem;
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+            #    .css-1d391kg {
+            #         padding-top: 3.5rem;
+            #         padding-right: 1rem;
+            #         padding-bottom: 3.5rem;
+            #         padding-left: 1rem;
+            #     }
+            #     .css-1a7jz76 h3{
+            #         padding: 0rem 0px 0rem;
+            #     }
 
-#                 .css-1xv07vx hr{
-#                 margin: 0.5em 0px;
-#                 }
+            #     .css-1xv07vx hr{
+            #     margin: 0.5em 0px;
+            #     }
 
-#         </style>
-#         """, unsafe_allow_html=True)
+        </style>
+        """, unsafe_allow_html=True)
 
-# initialise app with introduction page
-# if "page" not in st.session_state: 
-#     st.session_state.page = "Introduction"
-#     #st.session_state.page = "Introduction"
+
+
 
 # set up sidebar
 with st.sidebar:
-    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How Computers Think", "1.1 Computer Programmes", "1.2 Types and Values","1.3 Exercises","1.4 Glossary","1.5 Quiz","---","Contact"],
-                        icons=['house','dot','kanban','dot','dot','boxes','book','stopwatch','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
+    im = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logowithtext.png'))
+    st.image(im,use_column_width=True, output_format="PNG")
+
+    # prepare badges from quiz
+    if 'counter' not in st.session_state:
+        st.session_state.counter = False
+
+    if 1 <= st.session_state.counter <= 6 and st.session_state.badge == "q1":
+        badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_bronze.png'))
+        st.image(badge1, width=40)
+    elif 6 < st.session_state.counter <= 8 and st.session_state.badge == "q1":
+        badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_silver.png'))
+        st.image(badge1, width=40)
+    elif st.session_state.counter > 8 and st.session_state.badge == "q1":
+        badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_gold.png'))
+        st.image(badge1, width=40)
+    
+    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How Computers Think", "1.1 Programming", "1.2 Types and Values","1.3 Exercises","1.4 Quiz","1.5 Glossary","---","Contact"],
+                        icons=['house','dot','kanban','dot','dot','boxes','stopwatch','book','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
                         default_index=0,
                         styles={
                             "menu-title": {"font-size": "18px"}, 
@@ -157,23 +172,22 @@ def main():
 
     </style>""", unsafe_allow_html=True)
 
+    # If pressed on each tab, what should be shown
     if choose == "Introduction":
         page_intro()
-        #st.session_state = "Introduction"
     if choose == "1. How Computers Think":
         page_1_how_computers_think()
-    if choose == "1.1 Computer Programmes":
+    if choose == "1.1 Programming":
         page_1_1_computer_programmes()
     if choose == "1.2 Types and Values":
         page_1_2_types_and_values()
     if choose == "1.3 Exercises":
         pass 
-    if choose == "1.4 Glossary":
-        page_glossary()
-    if choose == "1.5 Quiz":
+    if choose == "1.4 Quiz":
         page_quiz()
-    if choose == "Full Glossary":
-        pass 
+        #print(st.session_state.counter, st.session_state.badge)
+    if choose == "1.5 Glossary":
+        page_glossary()
     if choose == "Contact": 
         pass
 
