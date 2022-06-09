@@ -36,7 +36,7 @@ st.markdown("""
                     padding-top: 1rem;
                     padding-bottom: 10rem;
                     padding-left: 7rem;
-                    padding-right: 10rem;
+                    padding-right: 13rem;
                 }
         </style>
         """, unsafe_allow_html=True)
@@ -49,24 +49,8 @@ st.markdown("""
                     padding-left: 1.5rem;
                     padding-right: 1.5rem;
                 }
-            #    .css-1d391kg {
-            #         padding-top: 3.5rem;
-            #         padding-right: 1rem;
-            #         padding-bottom: 3.5rem;
-            #         padding-left: 1rem;
-            #     }
-            #     .css-1a7jz76 h3{
-            #         padding: 0rem 0px 0rem;
-            #     }
-
-            #     .css-1xv07vx hr{
-            #     margin: 0.5em 0px;
-            #     }
-
         </style>
         """, unsafe_allow_html=True)
-
-
 
 
 # set up sidebar
@@ -88,8 +72,8 @@ with st.sidebar:
         badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_gold.png'))
         st.image(badge1, width=40)
     
-    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How Computers Think", "1.1 Programming", "1.2 Types and Values","1.3 Exercises","1.4 Quiz","1.5 Glossary","---","Contact"],
-                        icons=['house','dot','kanban','dot','dot','boxes','stopwatch','book','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
+    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How Computers Think", "1.1 Programming", "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","Contact"],
+                        icons=['house','dot','kanban','dot','dot','stopwatch','book','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
                         default_index=0,
                         styles={
                             "menu-title": {"font-size": "18px"}, 
@@ -181,12 +165,10 @@ def main():
         page_1_1_computer_programmes()
     if choose == "1.2 Types and Values":
         page_1_2_types_and_values()
-    if choose == "1.3 Exercises":
-        pass 
-    if choose == "1.4 Quiz":
+    if choose == "1.3 Quiz":
         page_quiz()
         #print(st.session_state.counter, st.session_state.badge)
-    if choose == "1.5 Glossary":
+    if choose == "1.4 Glossary":
         page_glossary()
     if choose == "Contact": 
         pass
