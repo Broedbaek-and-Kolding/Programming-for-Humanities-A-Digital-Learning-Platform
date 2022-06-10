@@ -6,7 +6,7 @@
   <p align="center">
     Human-Computer Interaction - MSc Cognitive Science Master at Aarhus University - Spring 2022
   <br />
-  <em><a href="https://github.com/idabh"><strong>Signe Kirk Brødbæk</strong></a> & <a href="https://github.com/sarakolding"><strong>Sara Kolding</strong></a></em>
+  <em><a href="https://github.com/signekb"><strong>Signe Kirk Brødbæk</strong></a> & <a href="https://github.com/sarakolding"><strong>Sara Kolding</strong></a></em>
   </p>
 </div>
 
