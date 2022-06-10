@@ -1,6 +1,6 @@
 <div id="top"></div>
 <div align="center">
-    <img src="data/DALL·E 2022-05-31 16.23.40.png" alt="Logo" width="80" height="80">
+    <img src="images/DALL·E 2022-06-10 13.34.39.png" alt="Logo" width="80" height="80">
 <h2 align="center">Programming for Humanities: A Digital Learning Platform </h3>
 
   <p align="center">
@@ -33,3 +33,6 @@ Digitalisation is becoming a continuously larger part of our daily lives, and it
 Signe Kirk Brødbæk - signebroedbaek@gmail.com
 <br />
 Sara Kolding - sarakolding@live.dk
+
+## Acknowledgments
+*  Icon created with [OpenAI's DALL-E 2](https://openai.com/dall-e-2/)
