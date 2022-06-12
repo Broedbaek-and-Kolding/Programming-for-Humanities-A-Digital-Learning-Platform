@@ -56,7 +56,13 @@ def page_1_1_computer_programmes():
             exec(code)
         
         # Output 
-        st.markdown(str(s.getvalue()))
+        st.markdown('''<div 
+        style="
+        font-size: 20px; 
+        padding: 10px; 
+        border: 1px solid lightgray; 
+        border-radius: 5px;">\n''' + str(s.getvalue()) +
+        '''\n </div>''', unsafe_allow_html=True)
         # a = str(s.getvalue())
         # st.success(a)
     
