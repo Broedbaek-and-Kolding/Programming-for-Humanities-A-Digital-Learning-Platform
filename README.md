@@ -28,7 +28,7 @@ Digitalisation is becoming a continuously larger part of our daily lives, and it
   ```sh
   pip install -r requirements.txt
   ```
-* Run main.py
+* Run by writing the following in the terminal: streamlit run main.py
 
 ## Contact
 Signe Kirk Brødbæk - signebroedbaek@gmail.com
