@@ -19,6 +19,7 @@ import os
 
 # Import page functions 
 from utils.page_introduction import page_intro
+from utils.page_why_programming import page_why_programming
 from utils.page_1_how_computers_think import page_1_how_computers_think
 from utils.page_1_1_computer_programmes import page_1_1_computer_programmes
 from utils.page_1_2_types_and_values import page_1_2_types_and_values
@@ -159,6 +160,8 @@ def main():
     # If pressed on each tab, what should be shown
     if choose == "Introduction":
         page_intro()
+    if choose == "0. Why Programming?":
+        page_why_programming()
     if choose == "1. How Computers Think":
         page_1_how_computers_think()
     if choose == "1.1 Computer Programmes":
