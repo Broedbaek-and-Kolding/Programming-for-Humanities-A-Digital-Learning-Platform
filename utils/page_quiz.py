@@ -83,7 +83,7 @@ def page_quiz():
                 st.image(badge1, width=100)
 
                 st.markdown('''
-                To continue to the next topic, and learn even more about programming go to the sidebar \n\n and choose the topic you want to learn more about.''')
+                To see an overview of all the terms you have learned so far, so to the Glossary tab.''')
 
                 if st.button("Press here to save your badge in the sidebar",key="sidebar_badge"):
                 #     with st.sidebar:

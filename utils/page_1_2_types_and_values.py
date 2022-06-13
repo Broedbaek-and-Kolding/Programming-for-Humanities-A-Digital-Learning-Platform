@@ -22,9 +22,12 @@ def page_1_2_types_and_values():
     There are many types in Python, as you can see from the image below. For now, we will focus on integers, floating-point numbers and strings. 
     ''') 
     # image: python data types
+    im = Image.open(os.path.join(os.path.abspath(""),'images','python_data_types.png'))
+    st.image(im,use_column_width=True, output_format="PNG")
+
 
     st.write('''
-    If you are not sure what type a value has, you can find out easily. You just have to write type(), and then the value whose type you want to check inside the parentheses. \n
+    If you are not sure what type a value has, you can find out easily. You just have to use the type function, and then the value whose type you want to check inside the brackets. \n
     E.g. if you want to check the type of 3, write type(2).
     ''')
     st.info(''' **Exercise 1.2.1** \n\n 
@@ -50,7 +53,7 @@ def page_1_2_types_and_values():
     st.write('''
     In these results, the word *class* is used in the sense of a category; a type is a category of values. 
 
-    Not surprisingly, integers belong to the type *int*, strings belong to *str*, and floating-point numbers belong to *float*. 
+    Not surprisingly, integers, such as 3, belong to the type *int*, strings, such as "hello!", belong to *str*, and floating-point numbers, such as 53.4, belong to *float*. 
     ''')
 
     st.info(''' **Exercise 1.2.2**
@@ -89,7 +92,7 @@ def page_1_2_types_and_values():
     This was everything we had for you in this module! Well done! 
 
     In the next tab, you will find a quiz that will help you revise the knowledge you have just acquired and  apply it to new examples. 
-     
+
     '''
     )
 
