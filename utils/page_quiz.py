@@ -9,13 +9,13 @@ import random
 def page_quiz():
     # dictionary with questions: [0] = question, 1-3 = answers, 4 = correct answer, 5 = correct feedback, 6 = incorrect feedback
     quiz_dict = {1: ["What type of language is a programming language, such as Python?", "A natural language", "An informal language","A formal language", "A formal language", "Yes, that is correct! \n\n Programming languages are formal languages because they are specifically designed to express the computations, we want the computer to execute.", "That is not correct, unfortunately. \n\n Programming languages are formal languages because they are specifically designed to express the computations, we want the computer to execute."],
-            2: ["What does this mean?", "Nothing", "Everything", "Something, but I don't know what", "Everything", "Yes, that is correct, because HCI is LIFE!", "Unfortunately, that is not correct. This is 'everything', because HCI is life"], 
+            2: ["What is the output of this code: \n\n 4+4", "Nothing", "4+4", "8", "Nothing", "Yes, that is correct! \n\n There will be no output of this code, because the print function is not around the expression. To get an output, the code should be: \n\n print(4+4)", "That is not correct, unfortunately. \n\n There will be no output of this code, since the print function is not around the expression. To get an output, the code should be: \n\n print(4+4)"], 
             3: ["Is Sara cool?",'Yes','No','Sometimes', "Yes", "Yes, that is correct! \n Sara is cool because she's got swag!", "Unfortunately, that is not correct. Sara *is* cool!"], 
             4: ['Can Signe be said to have a functioning arm?', 'Yes','No','Sometimes', "Sometimes", "Yes, that is correct! \n\n Signe's arm only works sometimes because it breaks when she doesn't take care of it!", "Unfortunately, that is not correct. Signe's arm only works sometimes."],
             5: ['test','test','test','test','test','test','test'],
             6: ['test','test','test','test','test','test','test'],
             7: ['test','test','test','test','test','test','test'],
-            8: ['test','test','test','test','test','test','test'],
+            8: ['What type is "42"?','A string','A float','An integer','A string','Correct! Well done! \n\n ','test'],
             9: ['test','test','test','test','test','test','test'],
             10: ['test','test','test','test','test','test','test']}
 
@@ -24,29 +24,28 @@ def page_quiz():
     col1, col2, col3 = st.columns([0.3,4,0.3])
     col4, col5, col6, col7 = st.columns([0.3,3,1,0.3])
 
-
     # present start button and continue to question 1 when pressed
     with col2:
         if 'quiz_started' not in st.session_state: 
             st.session_state.quiz_started = False
-            st.title("Welcome to the quiz!")
+            st.title("🏅 Welcome to the quiz! 🏅") # ⚡️ 📯 🗯 📣 ⚜️ 🌟 ⚡️ 🥇 🏅  🎖 🏆 🥇🥈🥉
             st.markdown('''
-            In the following quiz, we will review some of the things, you have learned to far.
+            In the following quiz, we will review some of the things, you have learned to far, as well as apply it to new examples!
             
-            The quiz contains 10 questions which will be presented one at a time. 
+            The quiz contains 10 questions which will be presented one at a time. After you have completed the quiz, you will get a badge - and depending on how well you do, it will be bronze 🥉, silver 🥈 or gold 🥇.  
 
             To continue to the first question, press the button below.
 
-            Enjoy! \n \n
-
+            Enjoy!
             ''')
         
 
-    # prepare counter for correct questions
+    # prepare counter for correct questions and badge for when quiz is completed 
     if 'counter' not in st.session_state:
         st.session_state.counter = 0
     if 'badge' not in st.session_state:
         st.session_state.badge = False
+
     # show start page (start button issue not solved)
     with col2: 
         if not st.session_state.quiz_started:
@@ -97,12 +96,11 @@ def page_quiz():
         with col2:
             if q <= len(quiz_dict):
                 st.subheader(f"Question {q}/{len(quiz_dict)}")
-                
                 placeholder = st.empty()
                 
                 form = placeholder.form(key=f'form{q}')
-                form.write('Press submit when you have chosen your answer.')
                 radio = form.radio(quiz_dict[q][0],(quiz_dict[q][1],quiz_dict[q][2],quiz_dict[q][3]))
+                form.write('Press submit when you have chosen your answer.')
                 submit = form.form_submit_button('Submit')
 
                 # if answer is correct
@@ -127,6 +125,7 @@ def page_quiz():
                     placeholder.empty()
 
 
+    # return how many questions were answered correctly and the badge 
     return (st.session_state.counter, st.session_state.badge)
 
 

@@ -57,14 +57,14 @@ def page_intro():
     ''')
     
     # expander with literature
-    expander = st.expander("Literature")
-    expander.write('''
-        For this platform, we used the following literature: \n 
+    with st.expander("Literature"):
+        st.write('''
+            For this platform, we used the following literature: \n 
 
-        Buckley, I. (2019, December 5). What Is Coding and How Does It Work? MUO. https://www.makeuseof.com/tag/what-is-coding/
-        
-        Downey, A. (2016). 1. The Way of the Program. In Think Python (2nd edition, updated for Python 3). O’Reilly Media.
-    ''')
+            Buckley, I. (2019, December 5). What Is Coding and How Does It Work? MUO. https://www.makeuseof.com/tag/what-is-coding/
+            
+            Downey, A. (2016). 1. The Way of the Program. In Think Python (2nd edition, updated for Python 3). O’Reilly Media.
+        ''')
 
     # text
     st.markdown('''

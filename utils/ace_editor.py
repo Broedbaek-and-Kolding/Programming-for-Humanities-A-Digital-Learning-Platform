@@ -30,12 +30,6 @@ def ace_editor(key = "box1"):
             exec(code)
         
         # Output 
-        st.markdown('''<div 
-            style="
-            font-size: 20px; 
-            padding: 10px; 
-            border: 1px solid lightgray; 
-            border-radius: 5px;
-            margin: 10px;">\n''' + str(s.getvalue()) +
-            '''\n </div>''', unsafe_allow_html=True)
+        #st.markdown('<div style="font-size: 20px; padding: 10px; border: 1px solid lightgray; border-radius: 5px; margin: 10px;">' + str(s.getvalue()) + '</div>', unsafe_allow_html=True)
+        st.success(str(s.getvalue()))
     

@@ -155,6 +155,10 @@ def main():
     font-size: 16px;
     }
 
+    .css-1c20onu {
+    font-size: 18px;
+    }
+
     </style>""", unsafe_allow_html=True)
 
     # If pressed on each tab, what should be shown
