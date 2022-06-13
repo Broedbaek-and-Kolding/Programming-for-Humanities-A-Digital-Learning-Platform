@@ -9,7 +9,7 @@ from io import StringIO
 from utils.ace_editor import ace_editor
 
 def page_1_2_types_and_values():
-    st.title("1.2 Types and Values")
+    st.title("1.2 Types and Values 🛠")
     st.write('''
     A value is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 54.0, and “Hello, World!” 
 
@@ -53,12 +53,12 @@ def page_1_2_types_and_values():
     ace_editor(key="box2")
 
     with st.expander("📖 Press here for help"):
-                st.write("""
-                    Did you remember to write the print function around the code? \n 
-                    Did you remember all parantheses? Quotation marks on both sides of the numbers? \n
-                    DE.g. print(type(2))? print(type(42.2))? 
-                """)
+        st.write("""
+            Did you remember to write the print function around the code? \n 
+            Did you remember all parantheses? Quotation marks on both sides of the numbers? \n
+            DE.g. print(type(2))? print(type(42.2))? 
+        """)
     with st.expander("💡 Press here to see the solution"):
-                st.write("""
+        st.write("""
 
-                """)
+        """)
