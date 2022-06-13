@@ -30,37 +30,6 @@ def page_1_1_computer_programmes():
     ''')
 
     ace_editor()
-    # # Define code window
-    # code = st_ace(placeholder='Write code here',language='python',height=100, font_size=16, key="box1")
-
-    # # Prepare output of code window
-    # @contextlib.contextmanager
-    # def stdoutIO(stdout=None):
-    #     old = sys.stdout
-    #     if stdout is None:
-    #         stdout = StringIO()
-    #     sys.stdout = stdout
-    #     yield stdout
-    #     sys.stdout = old
-    #     #print("stdout:",stdout,sys.stdout,old)
-
-    # st.write("Output of code:")
-    # with stdoutIO() as s:
-    #     try:
-    #         exec(code)
-    #         #st.text("Right now there is no output of your code.")
-    #     except:
-    #         st.warning("Something is wrong with the code. \n Below, in the red box, you can see an error message. \n You will learn about these later - Otherwise, try to googling what it means (this is what most programmers do!)")
-    #         exec(code)
-        
-    #     # Output 
-    #     st.markdown('''<div 
-    #     style="
-    #     font-size: 20px; 
-    #     padding: 10px; 
-    #     border: 1px solid lightgray; 
-    #     border-radius: 5px;">\n''' + str(s.getvalue()) +
-    #     '''\n </div>''', unsafe_allow_html=True)
 
     with st.expander("💡 Press here to see the solution"):
         st.write("""
