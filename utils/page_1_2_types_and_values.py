@@ -62,3 +62,10 @@ def page_1_2_types_and_values():
         st.write("""
 
         """)
+
+    expander = st.expander("Literature")
+    expander.write('''
+        For this page, we used the following literature: \n 
+
+        Downey, A. (2016). 1. The Way of the Program. In Think Python (2nd edition, updated for Python 3). O’Reilly Media.
+    ''')

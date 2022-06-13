@@ -10,8 +10,9 @@ def page_1_how_computers_think():
     By themselves, computers don't know how to do anything. So, in order for the computer to do what we want them to, we must give them the right instructions. You can think of it like following a recipe: The computer follows the instructions step-by-step to get the outcome we want. 
     
     Much like learning to read, coding can feel hard to learn. The first time you try to code you will, probably, find it difficult, but every time you do it you get better.
-
-    **Natural languages and formal languages** \n
+    ''')
+    st.subheader("Natural languages and formal languages")
+    st.write('''
     When giving instructions to the computer, we want to speak a language it understands. In relation to this, it can be useful to discriminate between natural language and formal language. 
 
     *Natural languages* 
