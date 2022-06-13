@@ -1,8 +1,4 @@
 import streamlit as st
-from streamlit_ace import st_ace
-import contextlib
-import sys
-from io import StringIO
 
 def page_1_how_computers_think():
     #st.markdown(""" <style> .font {

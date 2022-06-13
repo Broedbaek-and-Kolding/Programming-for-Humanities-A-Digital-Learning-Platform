@@ -4,8 +4,10 @@ import contextlib
 import sys
 from io import StringIO
 
+from utils.ace_editor import ace_editor
+
 def page_1_1_computer_programmes():
-    st.title("1.1 Programming 💻 ")
+    st.title("1.1 Computer Programmes 💻 ")
     
     st.write('''
     There are hundreds of different programming languages, which can seem confusing. In this course, we will focus on the language Python.
@@ -26,45 +28,43 @@ def page_1_1_computer_programmes():
     
     Now, try writing print(4+4). Do you get an output now?
     ''')
-    # Define code window
-    code = st_ace(placeholder='Write code here',language='python',height=100, font_size=16, key="box1")
 
-    # Prepare output of code window
-    @contextlib.contextmanager
-    def stdoutIO(stdout=None):
-        old = sys.stdout
-        if stdout is None:
-            stdout = StringIO()
-        sys.stdout = stdout
-        yield stdout
-        sys.stdout = old
-        #print("stdout:",stdout,sys.stdout,old)
+    ace_editor()
+    # # Define code window
+    # code = st_ace(placeholder='Write code here',language='python',height=100, font_size=16, key="box1")
 
-    st.write("Output of code:")
-    with stdoutIO() as s:
-        try:
-            exec(code)
-            #st.text("Right now there is no output of your code.")
-        except:
-            st.warning("Something is wrong with the code. Below, in the red box, you can see an error message. You will learn about these later.")
-            with st.expander("💡 Press here to see the solution"):
-                st.write("""
-                    If you write 4+4 in the code editor above, you don't get an output.
-                    To see the result of your calculation, you have to write print() around it. 
-                    E.g.  if you write print(4+4), you the output will be 8.
-                """)
-            exec(code)
+    # # Prepare output of code window
+    # @contextlib.contextmanager
+    # def stdoutIO(stdout=None):
+    #     old = sys.stdout
+    #     if stdout is None:
+    #         stdout = StringIO()
+    #     sys.stdout = stdout
+    #     yield stdout
+    #     sys.stdout = old
+    #     #print("stdout:",stdout,sys.stdout,old)
+
+    # st.write("Output of code:")
+    # with stdoutIO() as s:
+    #     try:
+    #         exec(code)
+    #         #st.text("Right now there is no output of your code.")
+    #     except:
+    #         st.warning("Something is wrong with the code. \n Below, in the red box, you can see an error message. \n You will learn about these later - Otherwise, try to googling what it means (this is what most programmers do!)")
+    #         exec(code)
         
-        # Output 
-        st.markdown('''<div 
-        style="
-        font-size: 20px; 
-        padding: 10px; 
-        border: 1px solid lightgray; 
-        border-radius: 5px;">\n''' + str(s.getvalue()) +
-        '''\n </div>''', unsafe_allow_html=True)
-        # a = str(s.getvalue())
-        # st.success(a)
-    
-        # if a == st.success(a):
-        #     st.write("Right now, there is no output of your code!")
+    #     # Output 
+    #     st.markdown('''<div 
+    #     style="
+    #     font-size: 20px; 
+    #     padding: 10px; 
+    #     border: 1px solid lightgray; 
+    #     border-radius: 5px;">\n''' + str(s.getvalue()) +
+    #     '''\n </div>''', unsafe_allow_html=True)
+
+    with st.expander("💡 Press here to see the solution"):
+        st.write("""
+            If you write 4+4 in the code editor above, you don't get an output.
+            To see the result of your calculation, you have to write print() around it. 
+            E.g.  if you write print(4+4), you the output will be 8.
+        """)

@@ -24,7 +24,7 @@ from utils.page_1_1_computer_programmes import page_1_1_computer_programmes
 from utils.page_1_2_types_and_values import page_1_2_types_and_values
 from utils.page_glossary import page_glossary
 from utils.page_quiz import page_quiz
-
+from utils.page_contact import page_contact
 # set main page configurations
 #logo = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logo.png'))
 st.set_page_config(layout="wide",page_title="Learning Platform", page_icon="🐍")
@@ -38,17 +38,15 @@ st.markdown("""
                     padding-left: 7rem;
                     padding-right: 13rem;
                 }
-        </style>
-        """, unsafe_allow_html=True)
 
-st.markdown("""
-        <style>
                .css-1m3vq7  {
                     padding-top: 4.5rem;
                     padding-bottom: 1.5rem;
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
+                    padding-left: 1.2rem;
+                    padding-right: 1.2rem;
+                    width: 23rem;
                 }
+
         </style>
         """, unsafe_allow_html=True)
 
@@ -72,12 +70,14 @@ with st.sidebar:
         badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_gold.png'))
         st.image(badge1, width=40)
     
-    choose = option_menu("Scientific Programming for Humanities Students",["Introduction","---","1. How Computers Think", "1.1 Programming", "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","Contact"],
-                        icons=['house','dot','kanban','dot','dot','stopwatch','book','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
+    choose = option_menu("Scientific Programming for Humanities Students",
+                            ["Introduction","---","0. Why Programming?","---","1. How Computers Think", "1.1 Computer Programmes", 
+                            "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","Contact"],
+                        icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
                         default_index=0,
                         styles={
                             "menu-title": {"font-size": "18px"}, 
-                            "container": {"background-color": "#fafafa"}, # "padding": "5!important", 
+                            "container": {"background-color": "#fafafa"}, #"padding": "5!important", 
                             "icon": {"color": "black", "font-size": "18px"}, 
                             "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
                             "nav-link-selected": {"background-color": "#0077cc"},
@@ -161,7 +161,7 @@ def main():
         page_intro()
     if choose == "1. How Computers Think":
         page_1_how_computers_think()
-    if choose == "1.1 Programming":
+    if choose == "1.1 Computer Programmes":
         page_1_1_computer_programmes()
     if choose == "1.2 Types and Values":
         page_1_2_types_and_values()
@@ -171,7 +171,7 @@ def main():
     if choose == "1.4 Glossary":
         page_glossary()
     if choose == "Contact": 
-        pass
+        page_contact()
 
 
 
