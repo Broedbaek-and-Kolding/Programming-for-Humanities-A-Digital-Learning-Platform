@@ -8,8 +8,6 @@ from io import StringIO
 
 from utils.ace_editor import ace_editor
 
-
-
 def page_1_2_types_and_values():
     st.title("1.2 Types and Values")
     st.write('''
@@ -22,8 +20,9 @@ def page_1_2_types_and_values():
 
     If you are not sure what type a value has, you can find out easily. You just have to write type(), and then the value whose type you want to check inside the parentheses. \n
     E.g. if you want to check the type of 3, write type(2).
-
-    For example, try to check the types of 3, 53.0 and “Hello World”, in the code window below. \n
+    ''')
+    st.info(''' **Exercise 1.2.1** \n\n 
+    Try checking the types of 3, 53.0 and “Hello World”, in the code window below. \n\n 
     Remember: In order to see the output, you have to use the print function. 
     ''')
 

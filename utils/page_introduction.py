@@ -29,36 +29,32 @@ def page_intro():
 
     For this module, there are no prerequisites. All topics will be introductory, and you will try to program in this code windows within this browser without the need to install anything on your computer. 
     ''') 
-    st.info('''**Learning Outcomes**
+    st.info(''' **Learning Outcomes**
 
     At the end of this module, you will have gained knowledge of:    
 
     *Knowledge*
-    * Computational Thinking steps and how they can be applied to problem-solving tasks
-    * A range of programming paradigms and their effectiveness for a particular problem
-    * The concept of variables and structures for different data types
-    * Syntax of computer programming languages, including functions and scripts
-    * Boolean Logic, control flow, and looping
+    - Computational Thinking steps and how they can be applied to problem-solving tasks
+    - A range of programming paradigms and their effectiveness for a particular problem
+    - The concept of variables and structures for different data types
+    - Syntax of computer programming languages, including functions and scripts
+    - Boolean Logic, control flow, and looping
     
     During the module, you will obtain skills in order to:
 
     *Skills*
-    * Create and manipulate number sequences, vectors and matrices
-    * Create and index matrices and other data types
-    * Visualize using data plotting functions
-    * Use conditional reasoning to write loops
-    * Read, write and save files and explain the difference between different file types
-    * Identify the type and dimensionality of new data
+    - Create and manipulate number sequences, vectors and matrices
+    - Create and index matrices and other data types
+    - Visualize using data plotting functions
+    - Use conditional reasoning to write loops
+    - Read, write and save files and explain the difference between different file types
+    - Identify the type and dimensionality of new data
     
     You will gain the following competencies through the module:
 
     *Competencies*
     * Recognize strengths of Python as a programming and environment
     * Implement algorithms in Python code, which manipulate data and visualize results
-    
-    *Literature*
-    ...
-    
     ''')
     
     st.markdown('''
