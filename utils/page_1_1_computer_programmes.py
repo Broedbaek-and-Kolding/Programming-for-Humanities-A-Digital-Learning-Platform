@@ -27,7 +27,7 @@ def page_1_1_computer_programmes():
     *Math:* 
     - Perform besic mathematical operations, like addition and multiplication 
 
-    *Conditonal Execution:* 
+    *Conditional Execution:* 
     - Check for certain conditions nd run the appropriate code. 
 
     *Repetition:* 
@@ -72,6 +72,11 @@ def page_1_1_computer_programmes():
     # image: print function 
     im2 = Image.open(os.path.join(os.path.abspath(""),'images','print_function_small.png'))
     st.image(im2,use_column_width=True, output_format="PNG")
+
+    st.write('''
+    When you use the print function, the parameter you write inside the brackets are the *input*; it is what you put into the function. 
+    The *output* is the printed text. E.g., from the image above, the input is "hello world", and the output will be these words printed under "Output of code".  
+    ''')
 
     # info text: exercise
     st.info('''

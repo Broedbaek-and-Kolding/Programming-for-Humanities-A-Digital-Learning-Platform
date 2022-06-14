@@ -36,25 +36,13 @@ def page_intro():
     # info box with learning oucomes
     st.info(''' **Learning Outcomes**
 
-    At the end of this module, you will have gained knowledge of:    
-
-    *Knowledge*
-    - Computational Thinking steps and how they can be applied to problem-solving tasks
-    - The concept of types and values
-    - If statements
-    
-    During the module, you will obtain skills in order to:
-
-    *Skills*
-    - Create and manipulate strings, integers, and floats
-    - Use conditional reasoning 
-    
-    You will gain the following competencies through the module:
-
-    *Competencies*
-    - Recognize strengths of Python as a programming and environment
-    - Implement algorithms in Python code, which manipulate data and visualize results
-    ''')
+    At the end of this module, you will: 
+    - Recognise the strengths of programming for humanities 
+    - Complete simple computational thinking steps and how they can be applied to problem-solving tasks
+    - Understand the concept of types and values
+    - Create strings, integers, and floats
+    - Check what type a parameter is 
+       ''')
     
     # expander with literature
     with st.expander("Literature"):
