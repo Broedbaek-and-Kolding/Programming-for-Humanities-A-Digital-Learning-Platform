@@ -2,7 +2,7 @@ import streamlit as st
 
 def page_glossary():
     st.title("📖 1.4 Glossary")
-    st.write("On this page, you will find an overview of the terms you have learned so far. \n\n Click the download button below, to save them on your computer for later use.")
+    st.write("On this page, you will find an overview of the terms you have learned so far. Click the download button below to download them on your computer for later use.")
     text_str = '''
 
     *Conditional Execution:*
