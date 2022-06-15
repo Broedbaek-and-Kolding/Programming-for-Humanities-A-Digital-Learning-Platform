@@ -5,10 +5,14 @@ def page_glossary():
     st.write("On this page, you will find an overview of the terms you have learned so far. Click the download button below to download them on your computer for later use.")
     text_str = '''
 
+    *Computational Thinking:*
+    - Thinking about and framing problems and solutions in a way that would also allow a computer to execute them.
+    - How computing principles can by used to understand and analyse both natural and artificial processes.
+
     *Conditional Execution:*
     - One of the few basic instructions that appear in every programming language
     - Check for certain conditions and run the appropriate code.
-        
+
     *Float:*
     - A type 
     - Short for floating-point number
