@@ -28,7 +28,7 @@ def page_1_2_types_and_values():
 
     st.write('''
     If you are not sure what type a value has, you can find out easily. You just have to use the type function, and then the value whose type you want to check inside the brackets. \n
-    E.g. if you want to check the type of 3, write type(2).
+    E.g. if you want to check the type of 3, write type(3).
     ''')
     st.info(''' **Exercise 1.2.1** \n\n 
     Try checking the types of 3, 53.4 and “Hello World”, in the code window below. \n\n 

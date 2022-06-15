@@ -10,13 +10,13 @@ def page_intro():
     This is a prototype of an online learning platform created as an exam project for the course human-computer interaction on the Cognitive Science master's degree at Aarhus University. 
 
     In this prototype, we introduce one module, *Python Programming for Humanities*. 
-    This module is meant to be a gentle introduction to programming for students who have not previously worked with programming. 
+    This module is meant to be a gentle introduction to programming for students with no previous programming experience. 
     ''')
     st.write('''
     We take it one step at a time, with short and interactive exercises to learn about some of the general principles of how programming can be used to work with data. 
-    Examples of data in a humanities context could be surveys, social media posts, literary texts, or historical newspapers.  
+    Examples of different types of data used in humanities fields could be surveys, social media posts, literary texts, or historical newspapers.  
 
-    We want to help you get familiar with some programming techniques to help you produce readable and reproducible code. And to do this, we will introduce you to some of the basics of how programming can be used to communicate with computers. 
+    We want to help you get familiar with some programming techniques to help you produce readable and reproducible code, by introducing you to some of the basics of how programming can be used to communicate with computers. 
     
     Below, you see an example of code written in the programming language, Python:
     ''')
@@ -30,18 +30,18 @@ def page_intro():
     # info box with prerequisites
     st.info(''' **Prerequisites**
 
-    For this module, there are no prerequisites. All topics will be introductory, and you will try to program in this code windows within this browser without the need to install anything on your computer. 
+    There are no prerequisites for this module. All topics will be explained at an introductory level, and you will try to program in this code windows within this browser without the need to install anything on your computer. 
     ''') 
 
     # info box with learning oucomes
     st.info(''' **Learning Outcomes**
 
-    At the end of this module, you will: 
-    - Recognise the strengths of programming for humanities 
-    - Complete simple computational thinking steps and how they can be applied to problem-solving tasks
-    - Understand the concept of types and values
+    Through this module, you will: 
+    - Discover the strengths of programming as a tool for humanities 
+    - Understand simple computational thinking steps and how they can be applied to problem-solving tasks
+    - Understand and apply the concept of types and values
     - Create strings, integers, and floats
-    - Check what type a parameter is 
+    - Check what type a parameter is
        ''')
     
     # expander with literature
@@ -56,9 +56,9 @@ def page_intro():
 
     # text
     st.markdown('''
-    You can navigate the module by clicking on the topics in the left side bar, when you want to continue to the next page.  
+    You can navigate the module by clicking on the topics in the sidebar on the left, when you want to continue to the next page.  
 
-    We hope that you will enjoy and learn some new cool stuff about programming! 
+    We hope that you will learn some new and exciting things about programming! 
 
     <div style="text-align: right"> Sara Kolding and Signe Kirk Brødbæk </div>
     <div style="text-align: right"> Cognitive Science Graduate Students, Aarhus University </div>

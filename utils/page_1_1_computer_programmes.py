@@ -14,27 +14,27 @@ def page_1_1_computer_programmes():
     # text: programmes
     st.write('''
     A *programme* is a sequence of instructions that specifies how to perform a computation. 
-    The computation might be something mathematical, like solving an equation, but it can also be a symbolic computation, such as searching and replacing text in a document, or something graphhical, like processing an image or playing a video. 
+    The computation might be something mathematical, like solving an equation, but it can also be a symbolic computation, such as searching and replacing text in a document, or something graphical, like processing an image or playing a video. 
 
-    The details look different in every language, but a few basic instructions appear in just about every language: 
+    The details of how to write a programme look different in every programming language, but a few basic instructions appear in just about every language: 
 
     *Input:* 
-    - Get data from the keyboard, a file, the network, or some oher device 
+    - What the data is and where to get it form, e.g. from the keyboard, a file, the network, or some oher device.
 
     *Output:* 
-    - Display data on the screen, save it in a file, send it over the network, etc. 
+    - What to do with the data, e.g. display data on the screen, save it in a file, send it over the network, etc. 
 
     *Math:* 
-    - Perform besic mathematical operations, like addition and multiplication 
+    - What basic mathematical operations to perform, like addition and multiplication.
 
     *Conditional Execution:* 
-    - Check for certain conditions nd run the appropriate code. 
+    - What conditions to check for to run the appropriate code. E.g. should the operations only be performed if the data has certain properties?
 
     *Repetition:* 
-    - Perform some action repeatedly, usually with some variation 
+    - Perform some action repeatedly, usually with some variation.
 
-    Believe it or not, that's pretty much all there is to it. Every programme you've have used, no matter how complicated, is made up of instruictions that look pretty much like these. 
-    So you can think of programming as the process of breaking a large, complex task into smaller and smaller subtasks until the subtasks are simple enough to be performed with one of these basic instructions.
+    Believe it or not, that's pretty much all there is to it. Every programme you've have used, such as mobile apps or computer games, no matter how complicated, is made up of instructions that similar to these. 
+    You can think of programming as the process of breaking a large, complex task into smaller and smaller subtasks until the subtasks are simple enough to be performed with one of these basic instructions.
     ''')
     
     # text: python
@@ -45,8 +45,8 @@ def page_1_1_computer_programmes():
     It is considered easy to use and appropriate for introductory programming.
     Additionally, Python is free and open source, which means that new modules and functionalities are continuously developed and released.
     
-    In Python, every line of code tells the computer to do something. When we have a document full of code lines, we call it a *script*. 
-    Each script is designed to carry out a job, just like a recipe. And just like a recipe, all steps are important and must be written out specifically - and in the right order. If all steps are written correctly, it can be followed precisely, step by step, to get the cake/the output we want. 
+    In Python, every line of code tells the computer to do something. When we have a document full of lines of code, we call it a *script*. 
+    Each script is designed to carry out a job, just like a recipe. And just like a recipe, all steps are important and must be written out specifically - and in the right order. If all steps are written correctly, it can be followed precisely, step by step, to get the the output we want. 
     ''')
 
     # image: cake recipe
@@ -56,7 +56,7 @@ def page_1_1_computer_programmes():
     # text: code editors
     st.subheader("Code Editors")  
     st.write('''
-    Throughout this course, there will be exercises to get you started coding. One of the best ways to learn how to code is simply to do it: get it through your hands.  
+    Throughout this course, there will be exercises to get you started with programming. One of the best ways to learn how to program is simply to do it and practice.  
 
     Below, you see a code editor that says “Write code here”. This editor runs Python code, when you press the APPLY button just below the editor, or CMD+ENTER / CTRL+ENTER. \n
     
@@ -82,7 +82,7 @@ def page_1_1_computer_programmes():
     st.info('''
     **Exercise 1.1.1**
 
-    Try to write a calculation in the code editor below, e.g., 4+4. What do you get as output? 
+    Try to write a calculation in the code editor below, e.g., 4+4. What output do you get? 
     
     Now, try writing print(4+4). Do you get an output now?
     ''')
@@ -98,7 +98,7 @@ def page_1_1_computer_programmes():
             E.g.  if you write print(4+4), the output will be 8 - but if you write 4+4, you'll not get an output! 
         """)
 
-    # exmpander: literature
+    # expander: literature
     with st.expander("Literature"):
         st.write('''
             For this page, we used the following literature: \n 

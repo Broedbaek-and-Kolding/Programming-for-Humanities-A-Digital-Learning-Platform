@@ -7,7 +7,7 @@ def page_glossary():
 
     *Conditional Execution:*
     - One of the few basic instructions that appear in every programming language
-    - Check for certain conditions nd run the appropriate code.
+    - Check for certain conditions and run the appropriate code.
         
     *Float:*
     - A type 
