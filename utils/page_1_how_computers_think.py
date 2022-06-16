@@ -5,7 +5,7 @@ def page_1_how_computers_think():
     #    font-size:35px ; font-family: 'Cooper Black'; color: #FF9633;} 
     #    </style> """, unsafe_allow_html=True)
     #st.markdown('<p class="font">1. How Computers Think </p>', unsafe_allow_html=True)    
-    st.title("1. How Computers Think 🧐")
+    st.title("🧐 1. How Computers Think")
     st.write('''
     By themselves, computers don't know how to do anything. So, in order for the computer to do what we want them to, we must give them the right instructions. You can think of it like following a recipe: The computer follows the instructions step-by-step to get the outcome we want. Just like when cooking, the order of the steps is important. For example, we can't mix the ingredients properly when we have already baked the cake.
     

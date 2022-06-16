@@ -9,7 +9,7 @@ from  PIL import Image
 from utils.ace_editor import ace_editor
 
 def page_1_1_computer_programmes():
-    st.title("1.1 Computer Programmes 💻 ")
+    st.title("💻 1.1 Computer Programmes")
 
     # text: programmes
     st.write('''

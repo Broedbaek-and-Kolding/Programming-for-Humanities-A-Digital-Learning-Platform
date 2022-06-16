@@ -9,7 +9,7 @@ from io import StringIO
 from utils.ace_editor import ace_editor
 
 def page_1_2_types_and_values():
-    st.title("1.2 Types and Values 🛠")
+    st.title("🛠 1.2 Types and Values")
     # text
     st.write('''
     A value is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 53.4, and “Hello, World!” 
@@ -22,7 +22,7 @@ def page_1_2_types_and_values():
     There are many types in Python, as you can see from the image below. For now, we will focus on integers, floating-point numbers and strings. 
     ''') 
     # image: python data types
-    im = Image.open(os.path.join(os.path.abspath(""),'images','python_data_types.png'))
+    im = Image.open(os.path.join(os.path.abspath(""),'images','python_data_types_small.png'))
     st.image(im,use_column_width=True, output_format="PNG")
 
 

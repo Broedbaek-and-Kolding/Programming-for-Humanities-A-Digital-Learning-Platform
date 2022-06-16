@@ -25,9 +25,9 @@ def page_quiz():
 
     # present start button and continue to question 1 when pressed
     with col2:
-        if 'quiz_started' not in st.session_state: 
+        if 'quiz_started' not in st.session_state or st.session_state.quiz_started == False: 
             st.session_state.quiz_started = False
-            st.title("📣 Welcome to the quiz! 📣") # ⚡️ 📯 🗯 📣 ⚜️ 🌟 ⚡️ 🥇 🏅  🎖 🏆 🥇🥈🥉
+            st.title("📣 Welcome to the quiz!") # ⚡️ 📯 🗯 📣 ⚜️ 🌟 ⚡️ 🥇 🏅  🎖 🏆 🥇🥈🥉
             st.markdown('''
             In the following quiz, we will review some of the things, you have learned to far, as well as apply it to new examples!
             

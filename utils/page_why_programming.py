@@ -4,7 +4,7 @@ from  PIL import Image
 import os
 
 def page_why_programming():
-    st.title("0. Why Programming? 🧩")
+    st.title("🧩 0. Why Programming?")
     st.write('''
     We all use and interact with computers everyday - at home, at school, in our workplace. Programming underlies every aspect of these interactions, from apps or websites to data analysis or machine learning.
 
@@ -16,7 +16,7 @@ def page_why_programming():
     However, programming is not only the action of building a program, but also involves an understanding of the underlying process, which necessitates a specific way of thinking and expressing problems. 
     
     
-    Computational thinking involves thinking about and framing problems and solutions in a way that would also allow a computer to execute them. But it is not only about using programming languages to instruct computers how to solve a problem, but also how computing principles can by used to understand and analyse both natural and artificial processes.
+    *Computational thinking* involves thinking about and framing problems and solutions in a way that would also allow a computer to execute them. But it is not only about using programming languages to instruct computers how to solve a problem, but also how computing principles can by used to understand and analyse both natural and artificial processes.
     
 
     For example, the process of fixing a broken lamp can be described using computational principles.
