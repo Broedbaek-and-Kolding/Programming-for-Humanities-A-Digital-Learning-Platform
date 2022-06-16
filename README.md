@@ -10,9 +10,9 @@
   </p>
 </div>
 
-## About The Project
+## Access the Streamlit App
 
-This repository contains the code for a digital learning platform developed for -
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/sarakolding/HCI-exam/main/main.py)
 
 ### Abstract
 Digitalisation is becoming a continuously larger part of our daily lives, and it has been argued that digital learning has the potential to transform education and can increase learning outcomes. This paper addresses how to teach programming for humanities students with no programming experience using digital learning platforms. We review the existing literature, in addition to examining methodological considerations in relation to human-computer interaction. We develop a prototype of a digital learning platform, implementing HCI properties such as usability, interactivity, and gamification in the design, thereby, aiming to support and engage humanities students in learning how to program. Furthermore, we aim to balance usability criteria, such as effectiveness, learnability and utility, while still retaining sufficient user experience and functionality for empowering the users. Limitations include lack of direct communication with humanities students, absence of testing or evaluation of the prototype, as well as considerations of gamification and responsible design. <br>
@@ -37,3 +37,5 @@ Sara Kolding - sarakolding@live.dk
 
 ## Acknowledgments
 *  Icon created with [OpenAI's DALL-E 2](https://openai.com/dall-e-2/)
+
+
