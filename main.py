@@ -26,6 +26,9 @@ from utils.page_1_2_types_and_values import page_1_2_types_and_values
 from utils.page_glossary import page_glossary
 from utils.page_quiz import page_quiz
 from utils.page_contact import page_contact
+from utils.page_survey import page_survey
+
+
 # set main page configurations
 #logo = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logo.png'))
 st.set_page_config(layout="wide",page_title="Learning Platform", page_icon="🐍")
@@ -73,8 +76,8 @@ with st.sidebar:
     
     choose = option_menu("Scientific Programming for Humanities Students",
                             ["Introduction","---","0. Why Programming?","---","1. How Computers Think", "1.1 Computer Programmes", 
-                            "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","Contact"],
-                        icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
+                            "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","1.5 Survey","---","Contact"],
+                        icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','ui-radios','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
                         default_index=0,
                         styles={
                             "menu-title": {"font-size": "18px"}, 
@@ -177,6 +180,8 @@ def main():
         #print(st.session_state.counter, st.session_state.badge)
     if choose == "1.4 Glossary":
         page_glossary()
+    if choose == "1.5 Survey":
+        page_survey()
     if choose == "Contact": 
         page_contact()
 

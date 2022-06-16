@@ -101,5 +101,7 @@ def page_1_2_types_and_values():
         st.write('''
             For this page, we used the following literature: \n 
 
-            Downey, A. (2016). 1. The Way of the Program. In Think Python (2nd edition, updated for Python 3). O’Reilly Media.
+            Downey, A. (2016). 1. The Way of the Program. In Think Python (2nd edition, updated for Python 3). O'Reilly Media.
+
+            Python data types (2022), Programmers Portal, https://programmersportal.com/python-data-types/ 
         ''')
