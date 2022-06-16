@@ -19,7 +19,9 @@ def page_why_programming():
     *Computational thinking* involves thinking about and framing problems and solutions in a way that would also allow a computer to execute them. But it is not only about using programming languages to instruct computers how to solve a problem, but also how computing principles can by used to understand and analyse both natural and artificial processes.
     
 
-    For example, the process of fixing a broken lamp can be described using computational principles.
+    For example, the process of fixing a broken lamp can be described using computational principles, such as conditional statements. 
+    Every action or computation depends on a condition, such as true or false or yes or no, in a sequence of statements. 
+    For instance, whether the 'lamp plugged in?' statement is true or false determines whether the lamp should be plugged in, or whether we should move on to the next statement.
     ''')
     # image: print function 
     imLamp = Image.open(os.path.join(os.path.abspath(""),'images','LampFlowchart.png'))
