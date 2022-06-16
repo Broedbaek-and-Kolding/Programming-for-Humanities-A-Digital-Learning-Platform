@@ -41,7 +41,7 @@ def page_intro():
     - Understand simple computational thinking steps and how they can be applied to problem-solving tasks
     - Understand and apply the concept of types and values
     - Create strings, integers, and floats
-    - Check what type a parameter is
+    - Check what type a value is
        ''')
     
     # expander with literature

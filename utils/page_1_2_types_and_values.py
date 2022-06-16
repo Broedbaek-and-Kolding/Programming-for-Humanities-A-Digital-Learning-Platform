@@ -16,7 +16,7 @@ def page_1_2_types_and_values():
 
     These values belong to different *types*: 
     - 3 is an *integer*
-    - 53.4 is a *floating-point number* 
+    - 53.4 is a *floating-point number* (otherwise known as decimal numbers)
     - “Hello, World!” is a *string* 
 
     There are many types in Python, as you can see from the image below. For now, we will focus on integers, floating-point numbers and strings. 

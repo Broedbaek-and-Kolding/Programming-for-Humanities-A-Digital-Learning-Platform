@@ -19,7 +19,7 @@ def page_1_1_computer_programmes():
     The details of how to write a programme look different in every programming language, but a few basic instructions appear in just about every language: 
 
     *Input:* 
-    - What the data is and where to get it form, e.g. from the keyboard, a file, the network, or some oher device.
+    - What the data is and where to get it from, e.g., entered using the keyboard or accessed through a file, the network, or some oher device.
 
     *Output:* 
     - What to do with the data, e.g. display data on the screen, save it in a file, send it over the network, etc. 
@@ -62,8 +62,8 @@ def page_1_1_computer_programmes():
     
     One thing to know about Python is that nothing is returned unless you "print" it. Therefore, in these simple scenarios that we will practice, you need to use the print() function. 
     
-    
     "What is a function?", you might ask. A *function* can be thought of as little machines, which you can put something into. Then, they manipulate the input in some way, and, maybe, returns an output. 
+    In this way, a *programme*, as introduced above, can consist of one or more functions. 
 
     For instance , the print function is used to display messages on the screen. It is called by giving the name of the function, print, followed by a 
     pair of parentheses (brackets) which contain the parameters you want to pass to it. On the image below, the string "hello world" is the parameter. 

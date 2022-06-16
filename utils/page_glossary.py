@@ -16,7 +16,7 @@ def page_glossary():
     *Float:*
     - A type 
     - Short for floating-point number
-    - Includes decimal numbers, such as 46.8, 497.3, and 9,0. 
+    - Includes floating-point numbers, otherwise known as decimal numbers, such as 46.8, 497.3, and 9,0. 
 
     *Formal languages:*
     - Designed for specific applications
