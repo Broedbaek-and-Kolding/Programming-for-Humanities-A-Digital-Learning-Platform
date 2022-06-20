@@ -12,12 +12,12 @@ def page_1_2_types_and_values():
     st.title("🛠 1.2 Types and Values")
     # text
     st.write('''
-    A *value* is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 53.4, and “Hello, World!” 
+    A *value* is one of the basic things a programme works with, like a letter or a number. Some examples of values are `3`, `53.4`, and `“Hello, World!”`. 
 
     These values belong to different *types*: 
-    - 3 is an *integer*
-    - 53.4 is a *floating-point number* (otherwise known as decimal numbers)
-    - “Hello, World!” is a *string* 
+    - `3` is an *integer*
+    - `53.4` is a *floating-point number* (otherwise known as decimal numbers)
+    - `“Hello, World!”` is a *string* 
 
     There are many types in Python, as you can see from the image below. For now, we will focus on integers, floating-point numbers and strings. 
     ''') 
@@ -28,20 +28,19 @@ def page_1_2_types_and_values():
     st.subheader("The type() function")
     st.write('''
     If you are not sure what type a value has, you can find out easily. You just have to use the type function, and then the value whose type you want to check inside the brackets. \n
-    E.g. if you want to check the type of 3, write type(3).
+    E.g. if you want to check the type of `3`, write `type(3)`.
     
-    The output of the type() function looks something like: <class "int">, <class "str">, or <class "float">.
+    The output of the type() function looks something like: `<class "int">`, `<class "str">`, or `<class "float">`.
     
     *Class* is used here in the sense of a category; a type is a category of values. 
     
-    The next part of the output refers to the type of the value you are checking. Not surprisingly, integers, such as 3, belong to the type *int*, strings, such as "hello!", belong to *str*, and floating-point numbers, such as 53.4, belong to *float*. 
-
+    The next part of the output refers to the type of the value you are checking. Not surprisingly, integers, such as `3`, belong to the type *int*, floating-point numbers, such as `53.4`, belong to the type *float*, and strings, such as `"hello!"`, belong to the type *str*. 
     ''')
 
     # exercise 1.2.1
     st.info(''' **Exercise 1.2.1** \n\n 
-    Try checking the types of 3, 53.4 and “Hello World”, in the code editor below. \n\n 
-    Remember: In order to see the output, you have to use the print function. 
+    Try checking the types of `3`, `53.4` and `“Hello World”`, in the code editor below. \n\n 
+    Remember: In order to see the output, you have to use the print() function. 
     ''')
 
     # code editor
@@ -56,20 +55,20 @@ def page_1_2_types_and_values():
         
         Quotation marks on both sides of the numbers? \n
         
-        E.g., print(type(3))? print(type(53.4))? 
+        E.g., `print(type(3))`? Or `print(type(53.4))`? 
         ''')
 
     # expander: solution
     with st.expander("💡 Press here to see the solution"):
         st.write("""
-        To check the type of e.g. 3, you have to write print(type(3)) and then run the code by pressing the APPLY button. 
-        For 53.4 and “Hello World”, you have to write print(type(53.4)) and print(type("Hello World")). 
+        To check the type of e.g. `3`, you have to write `print(type(3))` and then run the code by pressing the APPLY button. 
+        For `53.4` and `“Hello World”`, you have to write `print(type(53.4))` and `print(type("Hello World"))`. 
 
-        When you check which type 3 is, you get the result: <class 'int'>
+        When you check which type 3 is, you get the result: `<class 'int'>`
         
-        For 53.4, the result is: <class 'float'>
+        For 53.4, the result is: `<class 'float'>`
         
-        For "Hello World", the result is: <class 'str'>
+        For "Hello World", the result is: `<class 'str'>`
         """)
 
     st.write('''
@@ -81,7 +80,7 @@ def page_1_2_types_and_values():
     # exercise 1.2.2
     st.info(''' **Exercise 1.2.3**
     
-    What type are values like '3' and '53.4'? 
+    What type are values like `'3'` and `'53.4'`? 
     
     They look like numbers but are in quotation marks - just like strings. 
     
@@ -95,30 +94,28 @@ def page_1_2_types_and_values():
         st.write('''
             Did you remember to write the print function around the code? \n 
             
-            Did you remember all parantheses? \n
+            Did you remember all parantheses? Quotation marks on both sides of the numbers? \n
             
-            Quotation marks on both sides of the numbers? \n
-            
-            E.g., print(type(3))? print(type(53.2))? 
+            E.g., `print(type(3))`? Or `print(type(53.2))`? 
         ''')
     
     # expander: solution
     with st.expander("💡 Press here to see the solution"):
         st.write("""
-        When you write numbers, like 3 and 53.4, in quotation marks, Python reads them as strings (i.e., the str type). 
+        When you write numbers, like `3` and `53.4`, in quotation marks, Python reads them as strings (i.e., the str type). 
         
         Basically, everything you put into quotation marks will be read as strings by Python - even variables that look like numbers!
         """)
 
     # text: summary
-    st.subheader("📋 Summary") # 
+    st.subheader("📋 Summary") 
     st.write('''
     Since this was more technical, here is a summary of what you have learned on this page: 
-    - A *value* is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 53.4, and “Hello, World!” 
-    - *Integers* are numbers with no decimals, such as 3, 5, or 1000
-    - *Floating-point numbers*, or *floats*, are decimal numbers such as 53.4 or 4667.345
-    - *Strings* are values in quotation marks, such as "Hello, World!". Importantly, it also includes values such as "42" and "5.62" even though they look like integers and floats if they are in quotation marks! 
-    - The *type() function* helps you check the type of a value. E.g., if you want to check the type of 3, write type(3).  The output of the type() function looks something like <class "int">, <class "str">, or <class "float">.
+    - A *value* is one of the basic things a programme works with, like a letter or a number. Some examples of values are `3`, `53.4`, and `“Hello, World!”` 
+    - *Integers* are numbers with no decimals, such as `3`, `5`, or `1000`
+    - *Floating-point numbers*, or *floats*, are decimal numbers such as `53.4` or `4667.345`
+    - *Strings* are values in quotation marks, such as `"Hello, World!"`. Importantly, it also includes values such as `"42"` and `"5.62"` even though they look like integers and floats if they are in quotation marks! 
+    - The *type() function* helps you check the type of a value. E.g., if you want to check the type of 3, write `type(3)`.  The output of the type() function looks something like `<class "int">`, `<class "str">`, or `<class "float">`.
     '''
     )
 
