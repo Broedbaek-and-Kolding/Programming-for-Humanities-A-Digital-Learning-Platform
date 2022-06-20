@@ -111,7 +111,7 @@ def page_1_2_types_and_values():
         """)
 
     # text: summary
-    st.subheader("Summary") 
+    st.subheader("📋 📝 Summary") # 
     st.write('''
     Since this was more technical, here is a summary of what you have learned on this page: 
     - A *value* is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 53.4, and “Hello, World!” 
