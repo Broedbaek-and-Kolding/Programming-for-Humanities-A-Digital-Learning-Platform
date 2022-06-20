@@ -18,7 +18,7 @@ from  PIL import Image
 import os
 
 # Import page functions 
-from utils.page_introduction import page_intro
+from utils.page_introduction import page_intro, page_intro_da
 from utils.page_why_programming import page_why_programming
 from utils.page_1_how_computers_think import page_1_how_computers_think
 from utils.page_1_1_computer_programmes import page_1_1_computer_programmes
@@ -40,7 +40,7 @@ st.markdown("""
                     padding-top: 1rem;
                     padding-bottom: 10rem;
                     padding-left: 7rem;
-                    padding-right: 13rem;
+                    padding-right: 7rem;
                 }
 
                .css-1m3vq7  {
@@ -57,6 +57,34 @@ st.markdown("""
 
 # set up sidebar
 with st.sidebar:
+    # prepare columns
+    col1, col2, space1 = st.columns([0.15,0.35,0.5])
+
+    # language bottom 
+    en = Image.open(os.path.join(os.path.abspath(""),'images','en.png'))
+    da = Image.open(os.path.join(os.path.abspath(""),'images','da.png'))
+
+    if 'language' not in st.session_state:
+        st.session_state.language = "en"
+
+    if st.session_state.language == "en":
+        with col1:
+            st.image(da,use_column_width=True, output_format="PNG")
+        with col2:
+            placeholder = st.empty()
+            lang_button = placeholder.button("På dansk",key="da")
+            if lang_button:
+                st.session_state.language = "da"    
+    elif st.session_state.language == "da":
+        with col1:
+            st.image(en,use_column_width=True, output_format="PNG")
+        with col2:
+            placeholder = st.empty()
+            lang_button = placeholder.button("In English",key="en")
+            if lang_button:
+                st.session_state.language = "en"
+                
+    # image: chcaa
     im = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logowithtext.png'))
     st.image(im,use_column_width=True, output_format="PNG")
 
@@ -74,19 +102,34 @@ with st.sidebar:
         badge1 = Image.open(os.path.join(os.path.abspath(""),'images','badge_gold.png'))
         st.image(badge1, width=40)
     
-    choose = option_menu("Scientific Programming for Humanities Students",
-                            ["Introduction","---","0. Why Programming?","---","1. How Computers Think", "1.1 Computer Programmes", 
-                            "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","1.5 Survey","---","Contact"],
-                        icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','ui-radios','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
-                        default_index=0,
-                        styles={
-                            "menu-title": {"font-size": "18px"}, 
-                            "container": {"background-color": "#fafafa"}, #"padding": "5!important", 
-                            "icon": {"color": "black", "font-size": "18px"}, 
-                            "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-                            "nav-link-selected": {"background-color": "#0077cc"},
-                            }
-                        )
+    if st.session_state.language == "en":
+        choose = option_menu("Scientific Programming for Humanities Students",
+                                ["Introduction","---","0. Why Programming?","---","1. How Computers Think", "1.1 Computer Programmes", 
+                                "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","1.5 Survey","---","Contact"],
+                            icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','ui-radios','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
+                            default_index=0,
+                            styles={
+                                "menu-title": {"font-size": "18px"}, 
+                                "container": {"background-color": "#fafafa"}, #"padding": "5!important", 
+                                "icon": {"color": "black", "font-size": "18px"}, 
+                                "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+                                "nav-link-selected": {"background-color": "#44749d"},
+                                }
+                            )
+    if st.session_state.language == "da":
+        choose = option_menu("Videnskabelig Programming for Humaniorastuderende",
+                                ["Introduktion","---","0. Hvorfor Programming?","---","1. Hvordan Computere Tænker", "1.1 Computerprogrammer", 
+                                "1.2 Typer og Værdier","1.3 Quiz","1.4 Gloseliste","---","1.5 Spørgeskema","---","Kontakt"],
+                            icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','ui-radios','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
+                            default_index=0,
+                            styles={
+                                "menu-title": {"font-size": "18px"}, 
+                                "container": {"background-color": "#fafafa"}, #"padding": "5!important", 
+                                "icon": {"color": "black", "font-size": "18px"}, 
+                                "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+                                "nav-link-selected": {"background-color": "#44749d"},
+                                }
+                            )
 
 def main():
     # Setting button configurations - in first main function, followed by pages + sidebar (basic layout) - this function only sets the layout of the pages + sidebar
@@ -128,8 +171,8 @@ def main():
         }
 
     div.stButton > button:first-child {
-        background:linear-gradient(to bottom, #0077cc 5%, #1e62d0 100%);
-        background-color:#0077cc;
+        background:linear-gradient(to bottom, #44749d 5%, #5084a3 100%);
+        background-color:#44749d;
         border-radius:6px;
         display:inline-block;
         cursor:pointer;
@@ -138,20 +181,39 @@ def main():
         display: flex;
         flex-direction: column;
         cursor:pointer;
-        color:#ffffff;
-        height: 3.3em;
+        height: 2.7em;
         margin: auto;
         width: 100%;
 
         }
+
     div.stButton > button:hover {
-        background:linear-gradient(to bottom, #0077cc 80%, #0a6da3 100%);
-        background-color:#0077cc;
+        background:linear-gradient(to bottom, #44749d 80%, #44749d 100%);
+        background-color:#44749d;
         }
 
     div.stButton > button:active {
         position:relative;
         top:2px;
+        }
+
+    .css-izp3j1 > button:language {
+        background-color: #ffffff;
+        border-radius:2px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:16px;
+        display: flex;
+        flex-direction: column;
+        cursor:pointer;
+        height: 3.3em;
+        margin: auto;
+        width: 100%;
+    }
+
+    .css-izp3j1 > button:hover {
+        background-color:#ffffff;
         }
 
     .streamlit-expanderHeader {
@@ -165,27 +227,49 @@ def main():
     </style>""", unsafe_allow_html=True)
 
     # If pressed on each tab, what should be shown
-    if choose == "Introduction":
-        page_intro()
-    if choose == "0. Why Programming?":
-        page_why_programming()
-    if choose == "1. How Computers Think":
-        page_1_how_computers_think()
-    if choose == "1.1 Computer Programmes":
-        page_1_1_computer_programmes()
-    if choose == "1.2 Types and Values":
-        page_1_2_types_and_values()
-    if choose == "1.3 Quiz":
-        page_quiz()
-        #print(st.session_state.counter, st.session_state.badge)
-    if choose == "1.4 Glossary":
-        page_glossary()
-    if choose == "1.5 Survey":
-        page_survey()
-    if choose == "Contact": 
-        page_contact()
+    # English version
+    if st.session_state.language == "en":
+        if choose == "Introduction":
+            page_intro()
+        if choose == "0. Why Programming?":
+            page_why_programming()
+        if choose == "1. How Computers Think":
+            page_1_how_computers_think()
+        if choose == "1.1 Computer Programmes":
+            page_1_1_computer_programmes()
+        if choose == "1.2 Types and Values":
+            page_1_2_types_and_values()
+        if choose == "1.3 Quiz":
+            page_quiz()
+            #print(st.session_state.counter, st.session_state.badge)
+        if choose == "1.4 Glossary":
+            page_glossary()
+        if choose == "1.5 Survey":
+            page_survey()
+        if choose == "Contact": 
+            page_contact()
 
-
+    # Danish
+    if st.session_state.language == "da":
+        if choose == "Introduktion":
+            page_intro_da()
+        if choose == "0. Hvorfor Programming?":
+            page_why_programming()
+        if choose == "1. Hvordan Computere Tænker":
+            page_1_how_computers_think()
+        if choose == "1.1 Computerprogrammer":
+            page_1_1_computer_programmes()
+        if choose == "1.2 Typer og Værdier":
+            page_1_2_types_and_values()
+        if choose == "1.3 Quiz":
+            page_quiz()
+            #print(st.session_state.counter, st.session_state.badge)
+        if choose == "1.4 Gloseliste":
+            page_glossary()
+        if choose == "1.5 Spørgeskema":
+            page_survey()
+        if choose == "Kontakt": 
+            page_contact()
 
 if __name__ == "__main__": 
 	main()    

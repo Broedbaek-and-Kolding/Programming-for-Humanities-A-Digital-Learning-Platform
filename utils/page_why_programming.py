@@ -24,8 +24,8 @@ def page_why_programming():
     For instance, whether the 'lamp plugged in?' statement is true or false determines whether the lamp should be plugged in, or whether we should move on to the next statement.
     ''')
     # image: print function 
-    imLamp = Image.open(os.path.join(os.path.abspath(""),'images','LampFlowchart.png'))
-    st.image(imLamp,use_column_width=False, output_format="PNG")
+    imLamp = Image.open(os.path.join(os.path.abspath(""),'images','LampFlowchart_blue.png'))
+    st.image(imLamp,use_column_width=True, output_format="PNG")
     
     st.write('''
     These skills are essential not only for programming applications, but can aid problem solving in general, across both fields of science and humanities.

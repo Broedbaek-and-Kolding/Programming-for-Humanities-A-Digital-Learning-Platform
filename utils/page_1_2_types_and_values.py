@@ -29,6 +29,13 @@ def page_1_2_types_and_values():
     st.write('''
     If you are not sure what type a value has, you can find out easily. You just have to use the type function, and then the value whose type you want to check inside the brackets. \n
     E.g. if you want to check the type of 3, write type(3).
+    
+    The output of the type() function looks something like: <class "int">, <class "str">, or <class "float">.
+    
+    *Class* is used here in the sense of a category; a type is a category of values. 
+    
+    The next part of the output refers to the type of the value you are checking. Not surprisingly, integers, such as 3, belong to the type *int*, strings, such as "hello!", belong to *str*, and floating-point numbers, such as 53.4, belong to *float*. 
+
     ''')
     st.info(''' **Exercise 1.2.1** \n\n 
     Try checking the types of 3, 53.4 and “Hello World”, in the code window below. \n\n 
@@ -51,9 +58,7 @@ def page_1_2_types_and_values():
             ''')
 
     st.write('''
-    In these results, the word *class* is used in the sense of a category; a type is a category of values. 
-
-    Not surprisingly, integers, such as 3, belong to the type *int*, strings, such as "hello!", belong to *str*, and floating-point numbers, such as 53.4, belong to *float*. 
+    Well done! Hopefully, trying this out gave you a better understanding of how to test the type of a value. 
     ''')
 
     st.info(''' **Exercise 1.2.2**

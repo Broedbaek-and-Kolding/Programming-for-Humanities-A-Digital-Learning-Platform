@@ -22,10 +22,10 @@ def page_intro():
     ''')
     # image
     im = Image.open(os.path.join(os.path.abspath(""),'images','python_code.png'))
-    st.image(im,use_column_width=True, output_format="PNG")
+    st.image(im, output_format="PNG")
     st.write("Output of code:")
     im2 = Image.open(os.path.join(os.path.abspath(""),'images','python_output.png'))
-    st.image(im2,use_column_width=True, output_format="PNG")
+    st.image(im2, output_format="PNG")
     
     # info box with prerequisites
     st.info(''' **Prerequisites**
@@ -66,6 +66,70 @@ def page_intro():
     ''',unsafe_allow_html=True)
 
 
+def page_intro_da():
+    st.subheader("Velkommen til")
+    st.header("*Python Programming for Humaniorastuderende*")
+    # text
+    st.write('''
+    Dette er en prototype af en online læringsplatform lavet i forbindelse med et eksamensprojekt i faget human-computer intercation på kandidatuddannelsen Kognitionsvidenskab på Aarhus Universitet.
+
+    Denne prototype inkluderer et modul, Python Programmering for Humaniorastuderende. 
+
+    Dette modul er en introduktion til programmering for studerende, som ikke har erfaring med programmering. 
+    ''')
+    st.write('''
+    Vi tager det ét step af gangen med korte og interaktive øvelser, så du kan lære nogle generelle principper om, hvordan programmering kan blive brugt til at arbejde med data relevant for humaniora.
+
+    Eksempler på datatyper brugt i humaniora kunne være spørgeskemaundersøgelser, opslag på sociale medier, literære tekster eller historiske aviser.  
+
+    Vi vil hjælpe dig med at skifte bekendtskab med nogle programmeringsteknikker til at hjælpe dig med at skrive læselig og reproducerbar kode. Derudover kommer til du til at lære lidt om, hvordan programmering kan bruges til at kommunikere med computere.
+    
+    Nedenfor kan du se et eksampel på kode skrevet i programmeringssproget Python: 
+    ''')
+    # image
+    im = Image.open(os.path.join(os.path.abspath(""),'images','python_code.png'))
+    st.image(im, output_format="PNG")
+    st.write("Output of code:")
+    im2 = Image.open(os.path.join(os.path.abspath(""),'images','python_output.png'))
+    st.image(im2, output_format="PNG")
+    
+    # info box with prerequisites
+    st.info(''' **Forudsætninger**
+
+    Der er ikke nogen forudsætninger for dette modul. Alle emner vil blive forklaret på et introducerende niveau, og du vil prøve at programmere i kode editor i denne platform, så du ikke behøver at installere noget på din computer.
+    ''') 
+
+    # info box with learning oucomes
+    st.info(''' **Læringsudbytte**
+
+    I denne modul vil du: 
+    - Opdage styrkerne ved at bruge programmering som et værktøj i humaniora.
+    - Forstå simple "computational thinking" steps og hvordan de kan blive brugt til problemløsning
+    - Forstå og anvende koncepterne af typer og værdier
+    - Lave "strings", "intergers" og "floating-point numbers"
+    - Tjekke hvilken type en værdi er
+       ''')
+    
+    # expander with literature
+    with st.expander("Literatur"):
+        st.write('''
+            I denne platform, blive følgende literatur anvendt: \n 
+
+            Buckley, I. (2019, December 5). What Is Coding and How Does It Work? MUO. https://www.makeuseof.com/tag/what-is-coding/
+            
+            Downey, A. (2016). 1. The Way of the Program. In Think Python (2nd edition, updated for Python 3). O'Reilly Media.
+        ''')
+
+    # text
+    st.markdown('''
+    Du kan navigere modulet ved at klikke på emnerne i menuen til venstre, når du vil fortsætte til den næste side. 
+
+    Vi håber at du kommer ti at lære nogle nye og spændende ting om programmering i Python!
+
+    <div style="text-align: right"> Sara Kolding og Signe Kirk Brødbæk </div>
+    <div style="text-align: right"> Kognitionsvidenskabsstuderende (cand.it.), Aarhus Universitet </div>
+    <div style="text-align: right"> 10. juni, 2022</div>
+    ''',unsafe_allow_html=True)
 
 
 
