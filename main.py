@@ -169,35 +169,49 @@ def main():
     </style>""", unsafe_allow_html=True)
 
     # If pressed on each tab, what should be shown
-    if choose == "Introduction":
-        page_intro()
-        st.session_state.page += 1
-    if choose == "0. Why Programming?":
-        page_why_programming()
-        st.session_state.page += 1
-    if choose == "1. How Computers Think":
-        page_1_how_computers_think()
-        st.session_state.page += 1
-    if choose == "1.1 Computer Programmes":
-        page_1_1_computer_programmes()
-        st.session_state.page += 1
-    if choose == "1.2 Types and Values":
-        page_1_2_types_and_values()
-        st.session_state.page += 1
-    if choose == "1.3 Quiz":
-        page_quiz()
-        st.session_state.page += 1
-        #print(st.session_state.counter, st.session_state.badge)
-    if choose == "1.4 Glossary":
-        page_glossary()
-        st.session_state.page += 1
-    if choose == "1.5 Survey":
-        page_survey()
-        st.session_state.page += 1
-    if choose == "Contact": 
-        page_contact()
-        st.session_state.page += 1
+    # English version
+    if st.session_state.language == "en":
+        if choose == "Introduction":
+            page_intro()
+        if choose == "0. Why Programming?":
+            page_why_programming()
+        if choose == "1. How Computers Think":
+            page_1_how_computers_think()
+        if choose == "1.1 Computer Programmes":
+            page_1_1_computer_programmes()
+        if choose == "1.2 Types and Values":
+            page_1_2_types_and_values()
+        if choose == "1.3 Quiz":
+            page_quiz()
+            #print(st.session_state.counter, st.session_state.badge)
+        if choose == "1.4 Glossary":
+            page_glossary()
+        if choose == "1.5 Survey":
+            page_survey()
+        if choose == "Contact": 
+            page_contact()
 
+    # Danish
+    if st.session_state.language == "da":
+        if choose == "Introduktion":
+            page_intro_da()
+        if choose == "0. Hvorfor Programming?":
+            page_why_programming()
+        if choose == "1. Hvordan Computere Tænker":
+            page_1_how_computers_think()
+        if choose == "1.1 Computerprogrammer":
+            page_1_1_computer_programmes()
+        if choose == "1.2 Typer og Værdier":
+            page_1_2_types_and_values()
+        if choose == "1.3 Quiz":
+            page_quiz()
+            #print(st.session_state.counter, st.session_state.badge)
+        if choose == "1.4 Gloseliste":
+            page_glossary()
+        if choose == "1.5 Spørgeskema":
+            page_survey()
+        if choose == "Kontakt": 
+            page_contact()
 
 components.html(
     f"""
