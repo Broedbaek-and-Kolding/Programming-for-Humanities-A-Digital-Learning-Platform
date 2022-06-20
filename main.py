@@ -23,7 +23,7 @@ from utils.page_why_programming import page_why_programming
 from utils.page_1_how_computers_think import page_1_how_computers_think
 from utils.page_1_1_computer_programmes import page_1_1_computer_programmes
 from utils.page_1_2_types_and_values import page_1_2_types_and_values
-from utils.page_glossary import page_glossary
+from utils.page_glossary import page_glossary, old_page_glossary
 from utils.page_quiz import page_quiz
 from utils.page_contact import page_contact
 from utils.page_survey import page_survey
@@ -272,7 +272,7 @@ def main():
             page_quiz()
             #print(st.session_state.counter, st.session_state.badge)
         if choose == "1.4 Gloseliste":
-            page_glossary()
+            old_page_glossary()
         if choose == "1.5 Spørgeskema":
             page_survey()
         if choose == "Kontakt": 
