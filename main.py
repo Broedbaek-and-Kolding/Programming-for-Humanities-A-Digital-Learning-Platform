@@ -189,7 +189,6 @@ def main():
         height: 2.7em;
         margin: auto;
         width: 100%;
-
         }
     div.stButton > button:hover {
         background:linear-gradient(to bottom, #44749d 80%, #44749d 100%);
@@ -202,12 +201,34 @@ def main():
         }
 
     .streamlit-expanderHeader {
-    font-size: 16px;
+        font-size: 16px;
     }
 
     .css-1c20onu {
-    font-size: 18px;
+        font-size: 18px;
     }
+
+    .st-dl {
+        background-color: #44749d;
+    }
+
+    div.stDownloadButton > button:first-child {
+        background:linear-gradient(to bottom, #44749d 5%, #5084a3 100%);
+        background-color:#44749d;
+        border-radius:6px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:16px;
+        height: 2.7em;
+        margin: auto;
+        width: 10 em;
+        }
+
+    div.stDownloadButton > button:hover {
+        background:linear-gradient(to bottom, #44749d 80%, #44749d 100%);
+        background-color:#44749d;
+        }
 
     </style>""", unsafe_allow_html=True)
 

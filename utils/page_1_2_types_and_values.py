@@ -116,7 +116,7 @@ def page_1_2_types_and_values():
     Since this was more technical, here is a summary of what you have learned on this page: 
     - A *value* is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 53.4, and “Hello, World!” 
     - *Integers* are numbers with no decimals, such as 3, 5, or 1000
-    - *Floating-point numbers, or *floats*, are decimal numbers such as 53.4 or 4667.345
+    - *Floating-point numbers*, or *floats*, are decimal numbers such as 53.4 or 4667.345
     - *Strings* are values in quotation marks, such as "Hello, World!". Importantly, it also includes values such as "42" and "5.62" even though they look like integers and floats if they are in quotation marks! 
     - The *type() function* helps you check the type of a value. E.g., if you want to check the type of 3, write type(3).  The output of the type() function looks something like <class "int">, <class "str">, or <class "float">.
     '''

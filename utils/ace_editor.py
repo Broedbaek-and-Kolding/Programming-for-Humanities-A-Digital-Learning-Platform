@@ -25,8 +25,7 @@ def ace_editor(key = "box1"):
             exec(code)
             #st.text("Right now there is no output of your code.")
         except:
-            st.warning("Something is wrong with the code. Therefore, you get an error message, which you can see in the red box below. \n\n You will learn about these later - Otherwise, you can try googling what it means (this is what most programmers do!)")
-            st.warning("As long as you have an error here, you are not able to go on to the next exercise, or get help for this exercise. \n\n Please, empty the code window and click the APPLY button to continue")
+            st.warning("Something is wrong with the code. Therefore, you get an error message, which you can see in the red box below. You will learn about these later - Otherwise, you can try googling what it means (this is what most programmers do!) \n \n As long as you have an error here, you are not able to go on to the next exercise, or get help for this exercise. \n\n Please, empty the code window and click the APPLY button to continue")
             exec(code)
         
         # Output 
