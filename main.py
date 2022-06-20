@@ -175,31 +175,36 @@ def main():
         }
 
     div.stButton > button:first-child {
-        background:linear-gradient(to bottom, #44749d 5%, #5084a3 100%);
-        background-color:#44749d;
-        border-radius:6px;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-size:16px;
+        background-color: #44749d;
+        border-radius: 5px;
+        border-style: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: top;
+        white-space: nowrap;
         display: flex;
         flex-direction: column;
-        cursor:pointer;
-        color:#ffffff;
+        width: 100%;
         height: 2.7em;
         margin: auto;
-        width: 100%;
-        }
-    
+    }
+
     div.stButton > button:hover {
-        background:linear-gradient(to bottom, #44749d 80%, #44749d 100%);
-        background-color:#44749d;
-        }
+        background-color: #446480; 
+        box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+        opacity: 1;
+    }
+
+    div.stButton > hover:after {
+        opacity: .5;
+    }
 
     div.stButton > button:active {
-        position:relative;
-        top:2px;
-        }
+        box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+    }
+
 
     .streamlit-expanderHeader {
         font-size: 16px;
@@ -210,7 +215,6 @@ def main():
     }
 
     div.stDownloadButton > button:first-child {
-        background:linear-gradient(to bottom, #44749d 5%, #5084a3 100%);
         background-color:#44749d;
         border-radius:6px;
         cursor:pointer;
@@ -223,8 +227,7 @@ def main():
         }
 
     div.stDownloadButton > button:hover {
-        background:linear-gradient(to bottom, #44749d 80%, #44749d 100%);
-        background-color:#44749d;
+        background-color: #446480;
         }
 
     </style>""", unsafe_allow_html=True)

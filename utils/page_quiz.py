@@ -63,7 +63,7 @@ def page_quiz():
         start = st.empty
         q = st.session_state.q_number
 
-        # if last question 
+        # if after last question 
         if q > len(quiz_dict):
             with col2:
                 st.header("You have completed the quiz!")
