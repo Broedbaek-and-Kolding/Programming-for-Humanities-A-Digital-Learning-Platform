@@ -12,7 +12,7 @@ def page_1_2_types_and_values():
     st.title("🛠 1.2 Types and Values")
     # text
     st.write('''
-    A value is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 53.4, and “Hello, World!” 
+    A *value* is one of the basic things a programme works with, like a letter or a number. Some examples of values are 3, 53.4, and “Hello, World!” 
 
     These values belong to different *types*: 
     - 3 is an *integer*
@@ -37,6 +37,8 @@ def page_1_2_types_and_values():
     The next part of the output refers to the type of the value you are checking. Not surprisingly, integers, such as 3, belong to the type *int*, strings, such as "hello!", belong to *str*, and floating-point numbers, such as 53.4, belong to *float*. 
 
     ''')
+
+    # exercise 1.2.1
     st.info(''' **Exercise 1.2.1** \n\n 
     Try checking the types of 3, 53.4 and “Hello World”, in the code window below. \n\n 
     Remember: In order to see the output, you have to use the print function. 
@@ -47,21 +49,37 @@ def page_1_2_types_and_values():
 
     # expander: help
     with st.expander("📖 Press here for help"):
-            st.write('''
-            Did you remember to write the print function around the code? \n 
-            
-            Did you remember all parantheses? \n
-            
-            Quotation marks on both sides of the numbers? \n
-            
-            E.g., print(type(3))? print(type(53.2))? 
-            ''')
+        st.write('''
+        Did you remember to write the print function around the code? \n 
+        
+        Did you remember all parantheses? \n
+        
+        Quotation marks on both sides of the numbers? \n
+        
+        E.g., print(type(3))? print(type(53.4))? 
+        ''')
+
+    # expander: solution
+    with st.expander("💡 Press here to see the solution"):
+        st.write("""
+        To check the type of e.g. 3, you have to write print(type(3)) and then run the code by pressing the APPLY button. 
+        For 53.4 and “Hello World”, you have to write print(type(53.4)) and print(type("Hello World")). 
+
+        When you check which type 3 is, you get the result: <class 'int'>
+        
+        For 53.4, the result is: <class 'float'>
+        
+        For "Hello World", the result is: <class 'str'>
+        """)
 
     st.write('''
     Well done! Hopefully, trying this out gave you a better understanding of how to test the type of a value. 
+
+
     ''')
 
-    st.info(''' **Exercise 1.2.2**
+    # exercise 1.2.2
+    st.info(''' **Exercise 1.2.3**
     
     What about values like '3' and '53.4'? 
     
