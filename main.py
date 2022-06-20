@@ -190,6 +190,7 @@ def main():
         margin: auto;
         width: 100%;
         }
+    
     div.stButton > button:hover {
         background:linear-gradient(to bottom, #44749d 80%, #44749d 100%);
         background-color:#44749d;
@@ -208,7 +209,7 @@ def main():
         font-size: 18px;
     }
 
-    .st-dl {
+    .st-eu {
         background-color: #44749d;
     }
 
