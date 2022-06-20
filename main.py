@@ -209,10 +209,6 @@ def main():
         font-size: 18px;
     }
 
-    .st-eu {
-        background-color: #44749d;
-    }
-
     div.stDownloadButton > button:first-child {
         background:linear-gradient(to bottom, #44749d 5%, #5084a3 100%);
         background-color:#44749d;
@@ -232,6 +228,11 @@ def main():
         }
 
     </style>""", unsafe_allow_html=True)
+
+    # .st-eu {
+    #     background-color: #44749d;
+    # }
+
 
     # If pressed on each tab, what should be shown
     # English version
