@@ -1,3 +1,4 @@
+#git+https://github.com/sarakolding/streamlit.git#egg=subdir&subdirectory=lib
 streamlit
 numpy
 streamlit_option_menu

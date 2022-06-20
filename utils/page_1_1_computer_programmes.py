@@ -17,7 +17,7 @@ def page_1_1_computer_programmes():
     The computation might be something mathematical, like solving an equation, but it can also be a symbolic computation, such as searching and replacing text in a document, or something graphical, like processing an image or playing a video. 
 
     The details of how to write a programme look different in every programming language, but a few basic instructions appear in just about every language: 
-
+    
     *Input:* 
     - What the data is and where to get it from, e.g., entered using the keyboard or accessed through a file, the network, or some oher device.
 
