@@ -65,7 +65,7 @@ def page_1_1_computer_programmes():
     "What is a function?", you might ask. A *function* can be thought of as little machines, which you can put something into. Then, they manipulate the input in some way, and, maybe, returns an output. 
     In this way, a *programme*, as introduced above, can consist of one or more functions. 
 
-    For instance , the print function is used to display messages on the screen. It is called by giving the name of the function, print, followed by a 
+    For instance , the print() function is used to display messages on the screen. You use it by giving the name of the function, print, followed by a 
     pair of parentheses (brackets) which contain the parameters you want to pass to it. On the image below, the string "hello world" is the parameter. 
     ''')
 
@@ -75,7 +75,9 @@ def page_1_1_computer_programmes():
 
     st.write('''
     When you use the print function, the parameter you write inside the brackets are the *input*; it is what you put into the function. 
-    The *output* is the printed text. E.g., from the image above, the input is "hello world", and the output will be these words printed under "Output of code".  
+    The *output* is the printed text. E.g., from the image above, the input is "hello world", and the output will be these words printed under "Output of code".
+
+    Importantly, if you don't write print() around your code, it will not be printed and there will be no output!  
     ''')
 
     # info text: exercise
@@ -97,6 +99,11 @@ def page_1_1_computer_programmes():
             To see the result of your calculation, you have to write print() around it. \n 
             E.g.  if you write print(4+4), the output will be 8 - but if you write 4+4, you'll not get an output! 
         """)
+
+    st.write('''
+    
+    ''')
+
 
     # expander: literature
     with st.expander("Literature"):
