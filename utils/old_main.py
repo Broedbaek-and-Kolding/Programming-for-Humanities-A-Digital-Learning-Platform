@@ -8,7 +8,7 @@ To run this, go to the project folder and run:
 # Load modules
 import streamlit as st
 from streamlit_option_menu import option_menu
-import streamlit.components.v1 as components
+#import streamlit.components.v1 as html
 from  PIL import Image
 #import numpy as np
 #import cv2
@@ -83,14 +83,10 @@ with st.sidebar:
             lang_button = placeholder.button("In English",key="en")
             if lang_button:
                 st.session_state.language = "en"
-
-     # image: chcaa     
-    im = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logowithtext_small.png'))
+                
+    # image: chcaa
+    im = Image.open(os.path.join(os.path.abspath(""),'images','chcaa_logowithtext.png'))
     st.image(im,use_column_width=True, output_format="PNG")
-
-    # page state
-    if "page" not in st.session_state:
-        st.session_state.page = 1
 
     # prepare badges from quiz
     if 'counter' not in st.session_state:
@@ -118,8 +114,8 @@ with st.sidebar:
                                 "icon": {"color": "black", "font-size": "18px"}, 
                                 "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
                                 "nav-link-selected": {"background-color": "#44749d"},
-                            }
-                        )
+                                }
+                            )
     if st.session_state.language == "da":
         choose = option_menu("Videnskabelig Programming for Humaniorastuderende",
                                 ["Introduktion","---","0. Hvorfor Programming?","---","1. Hvordan Computere Tænker", "1.1 Computerprogrammer", 
@@ -185,12 +181,12 @@ def main():
         display: flex;
         flex-direction: column;
         cursor:pointer;
-        color:#ffffff;
         height: 2.7em;
         margin: auto;
         width: 100%;
 
         }
+
     div.stButton > button:hover {
         background:linear-gradient(to bottom, #44749d 80%, #44749d 100%);
         background-color:#44749d;
@@ -199,6 +195,25 @@ def main():
     div.stButton > button:active {
         position:relative;
         top:2px;
+        }
+
+    .css-izp3j1 > button:language {
+        background-color: #ffffff;
+        border-radius:2px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-size:16px;
+        display: flex;
+        flex-direction: column;
+        cursor:pointer;
+        height: 3.3em;
+        margin: auto;
+        width: 100%;
+    }
+
+    .css-izp3j1 > button:hover {
+        background-color:#ffffff;
         }
 
     .streamlit-expanderHeader {
@@ -256,17 +271,5 @@ def main():
         if choose == "Kontakt": 
             page_contact()
 
-components.html(
-    f"""
-        <p>{st.session_state.page}</p>
-        <script>
-            window.parent.document.querySelector('section.main').scrollTo(0, 0);
-        </script>
-    """,
-    height=0
-)
-
-
 if __name__ == "__main__": 
 	main()    
-
