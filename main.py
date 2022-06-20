@@ -44,7 +44,7 @@ st.markdown("""
                 }
 
                .css-1m3vq7  {
-                    padding-top: 4.5rem;
+                    padding-top: 1rem;
                     padding-bottom: 1.5rem;
                     padding-left: 1.2rem;
                     padding-right: 1.2rem;
