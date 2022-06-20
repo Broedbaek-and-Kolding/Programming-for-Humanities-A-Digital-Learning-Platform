@@ -22,14 +22,14 @@ def page_1_how_computers_think():
     *Formal languages*
     - are designed for specific applications, such as computer programming or mathematics. 
     
-    Programming languages are formal languages that have been designed to express the computations we want the computer to execute. These languages have strict syntax rules that govern the structure of statements; a kind of grammar. E.g. in mathematics, the statement ''')
-    st.code('3+3=6', language='python')
-    st.write('''follows the correct syntax, while 
-    `3+ = 3$6`
-    does not. There are many different programming languages, and just like natural languages, some of them resemble each other closely while others don't. However, though most of these languages are suited for specific tasks, there are some universal similarities between them, as we will soon see.
+    Programming languages are formal languages that have been designed to express the computations we want the computer to execute. These languages have strict syntax rules that govern the structure of statements; a kind of grammar. 
+    E.g. in mathematics, the statement `3+3=6` follows the correct syntax, while `3+ = 3$6` does not. There are many different programming languages, and just like natural languages, some of them resemble each other closely while others don't. 
+    However, though most of these languages are suited for specific tasks, there are some universal similarities between them, as we will soon see.
 
-    Unlike when we use natural language to communicate with people, we must be very specific when telling the computer what to do using programming languages. If you tell a computer to start counting upwards, and don't tell it to stop, it'll keep counting forever! A big part of learning how to program is learning how to best instruct the computer using a programming language.
-    ''')
+    Unlike when we use natural language to communicate with people, we must be very specific when telling the computer what to do using programming languages. 
+    If you tell a computer to start counting upwards, and don't tell it to stop, it'll keep counting forever! 
+    A big part of learning how to program is learning how to best instruct the computer using a programming language.
+    ''') # st.code('3+3=6', language='python')
 
     expander = st.expander("Literature")
     expander.write('''

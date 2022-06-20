@@ -58,9 +58,10 @@ def page_1_1_computer_programmes():
     st.write('''
     Throughout this course, there will be exercises to get you started with programming. One of the best ways to learn how to program is simply to do it and practice.  
 
-    Below, you see a code editor that says “Write code here”. This editor runs Python code, when you press the APPLY button just below the editor, or CMD+ENTER / CTRL+ENTER. \n
+    Below, you see a code editor that says `Write code here`. This editor runs Python code, when you press the APPLY button just below the editor, or CMD+ENTER / CTRL+ENTER. \n
     
-    One thing to know about Python is that nothing is returned unless you "print" it. Therefore, in these simple scenarios that we will practice, you need to use the print() function. 
+    One thing to know about Python is that nothing is returned unless you "print" it. Therefore, in these simple scenarios that we will practice, you need to use the print() function in order to see the output of your code. 
+    Simply put, this just means that you will need to write `print()` around your code - i.e., the code you want to run should be inside the brackets. 
     
     "What is a function?", you might ask. A *function* can be thought of as little machines, which you can put something into. Then, they manipulate the input in some way, and, maybe, returns an output. 
     In this way, a *programme*, as introduced above, can consist of one or more functions. 
@@ -75,18 +76,18 @@ def page_1_1_computer_programmes():
 
     st.write('''
     When you use the print function, the parameter you write inside the brackets are the *input*; it is what you put into the function. 
-    The *output* is the printed text. E.g., from the image above, the input is "hello world", and the output will be these words printed under "Output of code".
+    The *output* is the printed text. E.g., from the image above, the input is `"hello world"`, and the output will be these words printed under "Output of code".
 
-    Importantly, if you don't write print() around your code, it will not be printed and there will be no output!  
+    Importantly, if you don't write `print()` around your code, it will not be printed and there will be no output!  
     ''')
 
     # info text: exercise
     st.info('''
     **Exercise 1.1.1**
 
-    Try to write a calculation in the code editor below, e.g., 4+4. What output do you get? 
+    Try to write a calculation in the code editor below, e.g., `4+4`. What output do you get? 
     
-    Now, try writing print(4+4). Do you get an output now?
+    Now, try writing `print(4+4)`. Do you get an output now?
     ''')
 
     # code editor
@@ -95,15 +96,10 @@ def page_1_1_computer_programmes():
     # expander: solution
     with st.expander("💡 Press here to see the solution"):
         st.write("""
-            If you write 4+4 in the code editor above, you don't get an output. \n 
-            To see the result of your calculation, you have to write print() around it. \n 
-            E.g.  if you write print(4+4), the output will be 8 - but if you write 4+4, you'll not get an output! 
+            If you write `4+4` in the code editor above, you don't get an output. \n 
+            To see the result of your calculation, you have to write `print()` around it. \n 
+            E.g., if you write `print(4+4)`, the output will be `8` - but if you write `4+4`, you'll not get an output at all! 
         """)
-
-    st.write('''
-    
-    ''')
-
 
     # expander: literature
     with st.expander("Literature"):
