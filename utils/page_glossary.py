@@ -33,15 +33,13 @@ def page_glossary():
             "Syntax": "*Syntax:* \n - The ”grammar” of a programming language.", 
             "Type() function": "*Type() function:* \n - Use the type function, when you are not sure what type a value has. \n - E.g., if you want to check the type of 3, write type(2). \n - Remember: If you want the output printed, you have to use the print() function around it. E.g. print(type(2))."
         }
-
-
     
     # text of selected terms
     for option in options:
         st.write(dict.get(option))
 
     with st.expander("Download Glossary"):
-        st.write("Click the download button below to download all terms on your computer for later use.")
+        st.write("Click the download button below to download the terms on your computer for later use. You can choose the only download the terms you have selected above, or to download all terms from the current module.")
         # prepare text for download
         text_str = '''
 
@@ -122,12 +120,15 @@ def page_glossary():
         - E.g. if you want to check the type of 3, write type(2).
         - Remember: If you want the output printed, you have to use the print() function around it. E.g. print(type(2)).
         '''
-
+        # prepare columns 
+        col1, col2 = st.columns([1,1])
         # download button
         selected_options = [dict.get(option) for option in options]
         selected_options = ' '.join(selected_options)
-        st.download_button('Download selected terms', "**1.4. Glossary**" + selected_options)
-        st.download_button('Download glossary', "**1.4. Glossary**" + text_str)
+        with col1:
+            st.download_button('Download selected terms only', "**1.4. Glossary**" + selected_options)
+        with col2: 
+            st.download_button('Download full glossary', "**1.4. Glossary**" + text_str)
 
     # expander terms
     # with st.expander("Computational Thinking"):

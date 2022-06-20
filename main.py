@@ -213,13 +213,13 @@ def main():
         background:linear-gradient(to bottom, #44749d 5%, #5084a3 100%);
         background-color:#44749d;
         border-radius:6px;
-        display:inline-block;
         cursor:pointer;
         color:#ffffff;
         font-size:16px;
         height: 2.7em;
+        display:inline-block;
         margin: auto;
-        width: 10 em;
+        width: 100%;
         }
 
     div.stDownloadButton > button:hover {
@@ -288,7 +288,7 @@ def main():
             st.session_state.page += 1
             #print(st.session_state.counter, st.session_state.badge)
         if choose == "1.4 Gloseliste":
-            old_page_glossary()
+            page_glossary()
             st.session_state.page += 1
         if choose == "1.5 Spørgeskema":
             page_survey()
