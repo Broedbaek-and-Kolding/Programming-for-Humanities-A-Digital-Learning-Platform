@@ -22,10 +22,10 @@ def page_1_2_types_and_values():
     There are many types in Python, as you can see from the image below. For now, we will focus on integers, floating-point numbers and strings. 
     ''') 
     # image: python data types
-    im = Image.open(os.path.join(os.path.abspath(""),'images','python_data_types_small.png'))
+    im = Image.open(os.path.join(os.path.abspath(""),'images','python_data_types_newblues.png'))
     st.image(im,use_column_width=True, output_format="PNG")
 
-
+    st.subheader("The type() function")
     st.write('''
     If you are not sure what type a value has, you can find out easily. You just have to use the type function, and then the value whose type you want to check inside the brackets. \n
     E.g. if you want to check the type of 3, write type(3).
@@ -40,11 +40,11 @@ def page_1_2_types_and_values():
 
     # exercise 1.2.1
     st.info(''' **Exercise 1.2.1** \n\n 
-    Try checking the types of 3, 53.4 and “Hello World”, in the code window below. \n\n 
+    Try checking the types of 3, 53.4 and “Hello World”, in the code editor below. \n\n 
     Remember: In order to see the output, you have to use the print function. 
     ''')
 
-    # code window
+    # code editor
     ace_editor()
 
     # expander: help
@@ -81,13 +81,13 @@ def page_1_2_types_and_values():
     # exercise 1.2.2
     st.info(''' **Exercise 1.2.3**
     
-    What about values like '3' and '53.4'? 
+    What type are values like '3' and '53.4'? 
     
-    They look like numbers, but they are in quotation marks like string. 
+    They look like numbers but are in quotation marks - just like strings. 
     
-    Try testing the types in the code window below. What do you find? See the result in the dropdown menu below the code window. ''')
+    Try testing the types in the code editor below. What do you find? See the result in the dropdown menu below the code editor. ''')
 
-    # code window
+    # code editor
     ace_editor(key="box2")
 
     # expander: help
