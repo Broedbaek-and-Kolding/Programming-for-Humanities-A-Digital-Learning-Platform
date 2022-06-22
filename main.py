@@ -107,7 +107,7 @@ with st.sidebar:
         st.image(badge1, width=40)
     
     if st.session_state.language == "en":
-        choose = option_menu("Scientific Programming for Humanities Students",
+        choose = option_menu("Python Programming for Humanities",
                                 ["Introduction","---","0. Why Programming?","---","1. How Computers Think", "1.1 Computer Programmes", 
                                 "1.2 Types and Values","1.3 Quiz","1.4 Glossary","---","1.5 Survey","---","Contact"],
                             icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','ui-radios','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
@@ -121,7 +121,7 @@ with st.sidebar:
                             }
                         )
     if st.session_state.language == "da":
-        choose = option_menu("Videnskabelig Programming for Humaniorastuderende",
+        choose = option_menu("Python Programming for Humaniorastuderende",
                                 ["Introduktion","---","0. Hvorfor Programming?","---","1. Hvordan Computere Tænker", "1.1 Computerprogrammer", 
                                 "1.2 Typer og Værdier","1.3 Quiz","1.4 Gloseliste","---","1.5 Spørgeskema","---","Kontakt"],
                             icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','ui-radios','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/
