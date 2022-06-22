@@ -121,7 +121,7 @@ with st.sidebar:
                             }
                         )
     if st.session_state.language == "da":
-        choose = option_menu("Python Programming for Humaniorastuderende",
+        choose = option_menu("Programming for Humaniorastuderende i Python",
                                 ["Introduktion","---","0. Hvorfor Programming?","---","1. Hvordan Computere Tænker", "1.1 Computerprogrammer", 
                                 "1.2 Typer og Værdier","1.3 Quiz","1.4 Gloseliste","---","1.5 Spørgeskema","---","Kontakt"],
                             icons=['house','dot','people','dot','display','dot','dot','stopwatch','book','dot','ui-radios','dot','envelope','person lines fill'], #https://icons.getbootstrap.com/

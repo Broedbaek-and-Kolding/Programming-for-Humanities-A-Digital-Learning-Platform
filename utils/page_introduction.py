@@ -68,12 +68,12 @@ def page_intro():
 
 def page_intro_da():
     st.subheader("Velkommen til")
-    st.header("*Python Programming for Humaniorastuderende*")
+    st.header("*Programming for Humaniorastuderende i Python*")
     # text
     st.write('''
     Dette er en prototype af en online læringsplatform lavet i forbindelse med et eksamensprojekt i faget human-computer intercation på kandidatuddannelsen Kognitionsvidenskab på Aarhus Universitet.
 
-    Denne prototype inkluderer et modul, Python Programmering for Humaniorastuderende. 
+    Denne prototype inkluderer et modul, *Programmering for Humaniorastuderende i Python*. 
 
     Dette modul er en introduktion til programmering for studerende, som ikke har erfaring med programmering. 
     ''')
