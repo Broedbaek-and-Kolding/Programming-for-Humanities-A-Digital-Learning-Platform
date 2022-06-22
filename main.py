@@ -72,7 +72,7 @@ with st.sidebar:
             st.image(da,use_column_width=True, output_format="PNG")
         with col2:
             placeholder = st.empty()
-            lang_button = placeholder.button("På dansk",key="da")
+            lang_button = placeholder.button("Dansk",key="da")
             if lang_button:
                 st.session_state.language = "da"    
     elif st.session_state.language == "da":
@@ -80,7 +80,7 @@ with st.sidebar:
             st.image(en,use_column_width=True, output_format="PNG")
         with col2:
             placeholder = st.empty()
-            lang_button = placeholder.button("In English",key="en")
+            lang_button = placeholder.button("English",key="en")
             if lang_button:
                 st.session_state.language = "en"
 
