@@ -102,7 +102,7 @@ def page_intro_da():
     # info box with learning oucomes
     st.info(''' **Læringsudbytte**
 
-    I denne modul vil du: 
+    I dette modul vil du: 
     - Opdage styrkerne ved at bruge programmering som et værktøj i humaniora.
     - Forstå simple "computational thinking" steps og hvordan de kan blive brugt til problemløsning
     - Forstå og anvende koncepterne af typer og værdier
